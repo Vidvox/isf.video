@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The Hap Codecs Homepage</title>
+  <meta name="description" content="The Hap Codecs Homepage">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <h1>How Do The Hap Codecs Work?</h1>
+    <h4>CPU Usage vs File Size vs Quality</h4>
+       <p style="margin-left: 40px">Typically every video encoding is a trade-off between the amount of disk access needed to read the file, the amount of work that your computer needs to do to decode the file and how close each frame is to its original pixel data.</p>
+       <p style="margin-left: 40px">Some formats are optimized to be very small so that they can be used for streaming or download. When archiving video a preference may be given to high quality or lossless codecs.
+    <h4>A Format Designed For Real-Time Ultra High Resolution Video Playback</h4>
+       <p style="margin-left: 40px">On most modern desktop and laptop computers that come with fast SSD hard drives the limiting factor in movie playback is the number of pixels that the CPU can decode on the fly.</p>
+       <p style="margin-left: 40px">The Hap codecs are a highly optimized video format that gives the highest priority to low CPU usage at the expense of larger file sizes and lower image quality. This makes it possible to playback multiple HD movies and ultra-high resolution video where other codecs would hit a CPU bottleneck.</p>
+    <h4>Hardware Accelerated Playback</h4>
+       <p style="margin-left: 40px">To get the highest performance video playback on most modern macOS, Windows and Linux computers the system graphics card can be leveraged to help decompress movies.</p>
+       <p style="margin-left: 40px">The Hap codecs make use of a dual encoding system that starts with standard S3TC texture compression on the GPU and then applies a second lossless compression phase on the CPU with Snappy.</p>
+       <p style="margin-left: 40px">On playback most of the work for decoding the video frames is handled by system graphics card, freeing up the CPU to perform other tasks.</p>
+  <p>Copyright ©2017 VIDVOX</p>
+</body>
+</html>
