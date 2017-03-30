@@ -1,25 +1,19 @@
 <!doctype html>
-
-<html lang="en">
+<html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>The Hap Codecs Homepage</title>
   <meta name="description" content="The Hap Codecs Homepage">
-  
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-92175193-1', 'auto');
-  ga('send', 'pageview');
+  <!-- This image is shown when hapcodecs.org is linked to on social
+  media or in most chat apps -->
+  <meta name="og:image" content="http://hapcodecs.org/TODO: SOME IMAGE HERE">
 
-  </script>
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/flickity.min.css">
+  <link rel="stylesheet" href="css/hap.css">
 </head>
 
 <body>
@@ -31,6 +25,12 @@
       <p style="margin-left: 40px">Using the free QuickTime extension you can export to Hap directly from many existing video rendering software and batch exporting applications. This extension is often bundled in the installer for many software packages or <a href="https://github.com/Vidvox/hap-qt-codec/releases">downloaded from GitHub</a>.<br>On the macOS there is a <a href="https://github.com/Vidvox/hap-in-avfoundation/releases">free opensource batch exporter tool from VIDVOX</a> that will encode to and from AVFoundation supported codecs.<br>FFMPEG can be used from the commandline to encode to Hap.<br>Some media servers provide their own tools for transcoding movies into Hap for their platforms.</p>
       <p style="margin-left: 40px">Hap Q and Hap Q Alpha allow for encoding with system specific 'chunk' size to optimize encodings for ultra high resolution video. The number of chunks should not exceed the number of CPU cores on the system that will playback the file.</p>
   <p>Copyright ©2017 VIDVOX</p>
+
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-92175193-1','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
 </body>
 </html>
