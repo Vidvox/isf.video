@@ -1,6 +1,4 @@
 *, *:before, *:after {
-    margin:             0;
-    padding:            0;
     box-sizing:         inherit;
     }
 
@@ -15,6 +13,7 @@ html {
     }
 
 body {
+    margin:             1em;
     font-family:        'Helvetica Neue', Helvetica, arial, sans-serif;
     font-size:          15px;
     line-height:        1.3;
@@ -26,7 +25,6 @@ a {
     }
 
 p {
-    margin-left:        40px;
     }
 
 /* Carousel Styling */
