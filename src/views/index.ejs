@@ -20,44 +20,8 @@
 
 <body>
 
-  <header>
-
-    <a id="logo" href="/" title="HAP"><img src="images/hap-logo.svg" width="104" height="35" alt="HAP" /></a>
-
-    <nav>
-      <ul>
-        <li><a href="#" title="">How to use</a></li>
-        <li><a href="#" title="">How it works</a></li>
-        <li><a href="#" title="">Partners</a></li>
-        <!-- <li><a href="#" title="">Developers</a></li> -->
-      </ul>
-    </nav>
-
-  </header>
-
-  <h1>Welcome to the Official Hap Video Codecs Homepage</h1>
-  <h3>The <em>Hardware Accelerated Playback</em> solution for HD and ultra high resolution video.</h3>
-  <p>Hap is a set of video codecs for macOS, Windows and Linux that performs decompression using a computer's graphics hardware, substantially reducing the CPU usage necessary to play video — this is useful in situations where CPU power is a limiting factor, such as when working with multiple high resolution videos in real-time.</p>
-  <p>Since the initial release in 2013 the open source Hap codecs family has become the standard for high performance high resolution movie playback in the worlds most popular media servers, live video performance and mapping softwares that are powering the visuals running at the worlds largest events.</p>
-  <h2>An Open Standard For Creative Work</h2>
-  <p>Artists need to use their movie files in lots of different tools during the creative process. Nobody wants to be locked into a single platform and having to transcode to lots of different proprietary formats is a pain.</p>
-  <p>The Hap codecs are designed to fit the needs of <a href="workflows.html">a variety of real-time video workflows such as event production, 360 video for gaming, projection mapping and creative coding.</a></p>
-  <h4>Widely Supported Pro Video Format</h2>
-  <p>The Hap codecs playback natively in <a href="who-supports-hap-codecs.html">over 20 different popular applications and creative coding environments</a> on macOS, Windows and Linux.</p>
-  <h4>Works with Existing Encoding Softwares and Workflows</h3>
-  <p>You can easily use most QuickTime and FFMPEG based exporting softwares to encode movie files to Hap. A free macOS batch exporter is available from VIDVOX and in some cases media servers can automatically transcode loaded media files into Hap.</p>
-  <p><em>Learn more about <a href="how-to-use-hap-codecs.html">how the to use the Hap codecs</a>.</em></p>
-  <h4>Alpha Channel Support</h2>
-  <p>For real-time compositing and overlays the Hap Alpha and Hap Q Alpha formats can be used to include the opacity level of each pixel.</p>
-  <h2>Optimized For Efficiency At Ultra HD and Larger Resolutions</h4>
-  <p>See how the Hap codecs compare to other popular options on the <a href="benchmarks.html">benchmarks page</a>.</p>
-  <p><em>Learn more about <a href="how-hap-codecs-work.html">how the Hap codecs work</a>.</em></p>
-  <h2>Information For Software Developers</h3>
-  <p>Visit our <a href="developers.html">developers' page</a> to learn how to integrate Hap in your own software.</p>
-  <h4>Open Source</h2>
-  <p>The Hap video codecs are open-source, licensed under a Free BSD License, meaning you can use it in your commercial or noncommercial applications free of charge. This project was originally written by <a href="http://kriss.cx/tom/">Tom Butterworth</a> who continues to maintain the bulk of the development and was commissioned by <a href="http://vidvox.net">VIDVOX</a> in 2012. Additional code and financial support has been provided by other developers and partners from around the world since its initial public release in 2013.</p>
-  <p>We have found that open source code and open standards are especially important for creative communities such as ours where interoperability between tools is often crucial for artists to achieve their visions. We encourage other developers of creative technology and artists themselves to share their low-level knowledge and support the adoption of open standards in their work.</p>
-  <p>Copyright ©2017 VIDVOX</p>
+  <%- include('partials/header'); %>
+  <%- include('partials/showcase'); %>
 
   <script src="scripts/jquery-2.2.4.min.js"></script>
   <script src="scripts/hap.js"></script>

@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    ejs = require("gulp-ejs")
+    ejs = require('gulp-ejs')
 
 gulp.task('sass', function () {
   return gulp.src('src/styles/**/*.scss')
@@ -14,14 +14,14 @@ gulp.task('scripts', function() {
 })
 
 gulp.task('ejs',function(){  
-  return gulp.src('src/views/**/*.ejs')
+  return gulp.src('src/views/*.ejs')
     .pipe(ejs({},{}, {ext:'.html'}))
-    .pipe(gulp.dest("docs/"))
+    .pipe(gulp.dest('docs/'))
 })
 
 gulp.task('assets',function(){  
   return gulp.src('src/images/**/*.*')
-    .pipe(gulp.dest("docs/images/"))
+    .pipe(gulp.dest('docs/images/'))
 })
 
 gulp.task('watch', function() {  
