@@ -25,10 +25,12 @@ gulp.task('assets',function(){
 })
 
 gulp.task('watch', function() {  
-    gulp.watch('src/styles/**/*.scss', ['styles'])
+    gulp.watch('src/styles/**/*.scss', ['sass'])
     gulp.watch('src/js/**/*.js', ['scripts'])
     gulp.watch('src/views/**/*.ejs', ['ejs'])
     gulp.watch('src/images/**/*.*', ['assets'])
 })
 
-gulp.task('default', ['sass', 'scripts', 'ejs', 'assets'])
+gulp.task('build', ['sass', 'scripts', 'ejs', 'assets'])
+
+gulp.task('default', ['build', 'watch'])

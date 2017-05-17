@@ -1,36 +1,45 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<%- include('partials/doc_top'); %>
+<%- include('partials/header'); %>
+<%- include('partials/showcase'); %>
 
-  <title>The Hap Codecs Homepage</title>
+  <section class="two-column">
+    <div>
+      <img src="images/home-4.jpg" alt="" width="266" height="266" />
+    </div>
+    <div class="text">
+      <h2>HAP is for artists, video lorem ipsums, and sed amet sum eramus.</h2>
+      <p>Artists need to use their movie files in lots of different tools during the creative process. Nobody wants to be locked into a single platform and having to transcode to lots of different proprietary formats to get the best performance is often confusing and time consuming. HAP addresses this problem by providing a free open source baseline standard that is designed to provide a single efficient hardware accelerated playback video format that can be used throughout the creative process.</p>
+    </div>
+  </section>
 
-  <!-- Search engines use this for the description of your site in search
-  results if they can't find any obvious text to grab off the site -->
-  <meta name="description" content="">
+  <section class="info-blocks">
 
-  <!-- This image is shown when hapcodecs.org is linked to on social
-  media or in most chat apps -->
-  <meta name="og:image" content="http://hapcodecs.org/TODO: SOME IMAGE HERE">
+    <div>
+      <h2>A pro video format for creative workflows</h2>
+      <p>The HAP codecs are designed to fit the needs of a variety of real-time video workflows where ultra high resolution video is needed such as live event production, set design, 360 video for gaming, projection mapping and creative coding.</p>
+      <p>Along with the ability to work at extremely high resolutions the HAP codecs also include pro video features like alpha channel support and high quality modes.</p>
+    </div>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="styles/hap.css">
-</head>
+    <div>
+      <h2>Fast as F*** Benchmarks </h2>
+      <p>HAP is a set of video codecs for macOS, Windows and Linux that performs decompression using a computer's graphics hardware, substantially reducing the CPU usage necessary to play video — this is useful in situations where CPU power is a limiting factor, such as when working with multiple high resolution videos in real-time.</p>
+      <p>Our benchmarks page shows how HAP compares to other commonly used options and discusses the tradeoffs involved for each format.</p>
+    </div>
 
-<body>
+    <div>
+      <h2>Works with existing workflows</h2>
+      <p>Movies that are encoded with the HAP codecs are typically exported into standard .mov or .avi containers just like other video you are used to working with and will playback just like any other file in supported applications. Additionally HAP can be exported to by using most QuickTime and FFmpeg based exporting software making it easy to fit into existing encoding workflows.</p>
+    </div>
 
-  <%- include('partials/header'); %>
-  <%- include('partials/showcase'); %>
+    <div>
+      <h2>Widely Supported / Partners</h2>
+      <p>Playback of movies encoded in HAP are already natively supported in over two dozen popular media servers, applications, creative coding environments and movies files can be encoded using most existing standard QuickTime and FFMPEG based workflows.</p>
+    </div>
 
-  <script src="scripts/jquery-2.2.4.min.js"></script>
-  <script src="scripts/hap.js"></script>
+  </section>
 
-  <script>
-    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-    ga('create','UA-92175193-1','auto');ga('send','pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <section class="slogan image" style="background-image:url(images/home-5.jpg)">
+    <h1>An open standard for creative work</h1>
+  </section>
 
-</body>
-</html>
+<%- include('partials/doc_bottom'); %>

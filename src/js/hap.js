@@ -1,5 +1,5 @@
 $( function() {
 
-
+	$('.info-blocks').masonry()
 
 } )
