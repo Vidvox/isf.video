@@ -64,18 +64,22 @@ section {
 }
 
 header {
-    padding: 20px;
+    padding: 24px 10.5263157895%;
     background-color: #33272C;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     nav {
-        display: inline-block;
         ul {
-            display: inline-block;
             list-style: none;
             li {
                 display: inline-block;
                 list-style: none;
                 a {
                     color: #FFF;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 10px;
                 }
             }
         }
@@ -87,14 +91,14 @@ header {
     grid-template-columns: 41.6666666667% 16.6666666667% 41.6666666667%;
     grid-template-rows: auto;
     div {
-        padding: 72px 40px;
+        padding: 72px 8.4210526316%;
         background-size: cover;
         background-position: 50% 50%;
     }
     .image,
     .wide {
-        padding-left: 72px;
-        padding-right: 72px;
+        padding-left: 17.4436090226%;
+        padding-right: 17.4436090226%;
     }
     .image {
         color: #FFF;

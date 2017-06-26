@@ -50,31 +50,34 @@ section {
   clear: both; }
 
 header {
-  padding: 20px;
-  background-color: #33272C; }
-  header nav {
-    display: inline-block; }
-    header nav ul {
+  padding: 24px 10.5263157895%;
+  background-color: #33272C;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
+  header nav ul {
+    list-style: none; }
+    header nav ul li {
       display: inline-block;
       list-style: none; }
-      header nav ul li {
-        display: inline-block;
-        list-style: none; }
-        header nav ul li a {
-          color: #FFF; }
+      header nav ul li a {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px; }
 
 .showcase {
   display: grid;
   grid-template-columns: 41.6666666667% 16.6666666667% 41.6666666667%;
   grid-template-rows: auto; }
   .showcase div {
-    padding: 72px 40px;
+    padding: 72px 8.4210526316%;
     background-size: cover;
     background-position: 50% 50%; }
   .showcase .image,
   .showcase .wide {
-    padding-left: 72px;
-    padding-right: 72px; }
+    padding-left: 17.4436090226%;
+    padding-right: 17.4436090226%; }
   .showcase .image {
     color: #FFF; }
   .showcase .wide {
