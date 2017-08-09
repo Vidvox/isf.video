@@ -97,6 +97,10 @@ header {
   .showcase a.blue {
     padding: 18px; }
 
+@media (max-width: 768px) {
+  .showcase {
+    display: block; } }
+
 .two-column {
   padding: 95px 112px 85px;
   display: grid;
@@ -110,6 +114,13 @@ header {
     width: 100%; }
   .two-column .text {
     margin-left: 10%; }
+
+@media (max-width: 768px) {
+  .two-column {
+    display: block;
+    padding: 10%; }
+    .two-column .text {
+      margin: 24px 0 0; } }
 
 .info-blocks div {
   float: left;
@@ -134,6 +145,10 @@ header {
 
 .info-blocks div:nth-child(6) {
   background-color: #D1D1D1; }
+
+@media (max-width: 768px) {
+  .info-blocks div {
+    width: auto; } }
 
 section.image {
   margin-top: -60px;
@@ -204,13 +219,11 @@ footer {
     display: block;
     margin: 16px 10%; } }
 
-@media (max-width: 768px) {
-  .showcase,
-  .two-column {
-    display: block; }
-  .two-column {
-    padding: 10%; }
-    .two-column .text {
-      margin: 24px 0 0; }
-  .info-blocks div {
-    width: auto; } }
+#happlications {
+  list-style: none;
+  font-size: 0; }
+  #happlications li {
+    float: left;
+    width: 120px; }
+    #happlications li img {
+      width: 100%; }

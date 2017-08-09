@@ -185,7 +185,6 @@ section.image {
     background-position: 50% 50%;
     color: #FFF;
 }
-@media (max-width: 768px) {
 
 .slogan {
     text-align: center;
@@ -264,5 +263,18 @@ footer {
     footer ul {
         display: block;
         margin: 16px 10%;
+    }
+}
+
+
+#happlications {
+    list-style: none;
+    font-size: 0;
+    li {
+        float: left;
+        width: 120px;
+        img {
+            width: 100%;
+        }
     }
 }
