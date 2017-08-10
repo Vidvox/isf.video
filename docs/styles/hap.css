@@ -220,10 +220,22 @@ footer {
     margin: 16px 10%; } }
 
 #happlications {
+  margin: 60px 2.1052631579%;
   list-style: none;
-  font-size: 0; }
-  #happlications li {
-    float: left;
-    width: 120px; }
-    #happlications li img {
-      width: 100%; }
+  font-size: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%; }
+  #happlications li img {
+    max-width: 100%;
+    max-height: 100%; }
+
+@media (max-width: 768px) {
+  #happlications {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; } }
+
+@media (max-width: 400px) {
+  #happlications {
+    grid-template-columns: 1fr 1fr 1fr; } }
