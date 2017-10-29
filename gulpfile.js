@@ -19,18 +19,24 @@ gulp.task('ejs',function(){
     .pipe(gulp.dest('docs/'))
 })
 
-gulp.task('assets',function(){  
+gulp.task('images',function(){  
   return gulp.src('src/images/**/*.*')
     .pipe(gulp.dest('docs/images/'))
+})
+
+gulp.task('videos',function(){  
+  return gulp.src('src/videos/**/*.*')
+    .pipe(gulp.dest('docs/videos/'))
 })
 
 gulp.task('watch', function() {  
     gulp.watch('src/styles/**/*.scss', ['sass'])
     gulp.watch('src/js/**/*.js', ['scripts'])
     gulp.watch('src/views/**/*.ejs', ['ejs'])
-    gulp.watch('src/images/**/*.*', ['assets'])
+    gulp.watch('src/images/**/*.*', ['images'])
+    gulp.watch('src/videos/**/*.*', ['videos'])
 })
 
-gulp.task('build', ['sass', 'scripts', 'ejs', 'assets'])
+gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos'])
 
 gulp.task('default', ['build', 'watch'])

@@ -1,4 +1,5 @@
 $blue: #4B7CFF;
+$dark-grey: #33272C;
 
 * {
     margin:             0;
@@ -21,7 +22,7 @@ html {
 body {
     font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, arial, sans-serif;
     font-size: 17px;
-    line-height: 27px;
+    line-height: 1.5882352941;
     max-width: 1140px;
     margin: auto;
     -webkit-font-smoothing: antialiased;
@@ -36,7 +37,6 @@ h1 {
 h2 {
     font-size: 28px;
     line-height: 36px;
-    padding-right: 52px;
 }
 
 h3 {
@@ -44,8 +44,14 @@ h3 {
     line-height: 27px;
 }
 
+ul, ol {
+    padding: 1em 0 1em 1.5em;
+    ul, ol {
+        font-size: 80%;
+    }
+}
+
 .subheading {
-    padding-right: 52px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
@@ -64,7 +70,7 @@ section {
     clear: both;
 }
 
-header {
+#nav {
     padding: 24px 10.5263157895%;
     background-color: #33272C;
     display: flex;
@@ -87,7 +93,7 @@ header {
     }
 }
 
-.showcase {
+.homepage-showcase {
     display: grid;
     grid-template-columns: 41.6666666667% 16.6666666667% 41.6666666667%;
     grid-template-rows: auto;
@@ -95,6 +101,12 @@ header {
         padding: 72px 8.4210526316%;
         background-size: cover;
         background-position: 50% 50%;
+    }
+    h2 {
+        padding-right: 52px;
+    }
+    .subheading {
+        padding-right: 52px;
     }
     .image,
     .wide {
@@ -311,5 +323,144 @@ footer {
 @media (max-width: 400px) {
     #happlications {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.cool-header {
+    text-align: center;
+    padding: 90px 32px 70px;
+    color: white;
+    background: $dark-grey;
+    .subheading {
+        display: block;
+        padding-top: 18px;
+    }
+}
+
+#articles {
+    section {
+        padding: 80px 0 18px;
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        img {
+            float: left;
+            width: 58.7719%;
+            margin-left: 10.5263%;
+        }
+        .description {
+            float: right;
+            margin-top: 42px;
+            margin-right: 4.0351%;
+            width: 21.7544%;
+        }
+        header {
+            clear: both;
+            float: left;
+            position: relative;
+            top: -60px;
+            padding-top: 12px;
+            padding-right: 12px;
+            padding-bottom: 24px;
+            padding-left: 38px;
+            width: 50%;
+            color: white;
+            background-color: $blue;
+            h2{
+                padding: 0;
+            }
+        }
+    }
+    section:nth-child(even) {
+        background-color: #F2F1F3;
+        img {
+            float: right;
+            margin-left: 0;
+            margin-right: 10.5263%;
+        }
+        .description {
+            float: left;
+            margin-right: 0;
+            margin-left: 4.0351%;
+        }
+        header {
+            float: right;
+        }
+    }
+}
+
+#using-hap-intro {
+    padding: 60px 20.7894736842%;
+    .hap-flavors {
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+        li {
+            display: inline-block;
+            vertical-align: top;
+            width: 25%;
+            padding: 12px 2% 12px 0;
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+}
+
+#using-hap-instructions {
+    section {
+        padding: 80px 04.0351% 60px;
+        background-color: #F2F1F3;
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        img, video, .under-media {
+            float: right;
+            clear: right;
+            width: 50%;
+        }
+        .instructions {
+            float: left;
+            margin-right: 4.0351%;
+            margin-left: 4.0351%;
+            width: 40%;
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+    }
+    section:nth-child(even) {
+        background-color: white;
+        img, video, .under-media {
+            float: left;
+            clear: left;
+        }
+        .instructions {
+            float: right;
+        }
+    }
+}
+
+#creative-coding {
+    padding: 60px 13.8596491228%;
+    .environments {
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+        li {
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+            padding: 12px 2% 12px 0;
+            font-size: 13px;
+            line-height: 20px;
+            img {
+                margin-top: 12px;
+                width: 100%;
+            }
+        }
     }
 }

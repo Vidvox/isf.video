@@ -15,7 +15,7 @@ html {
 body {
   font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, arial, sans-serif;
   font-size: 17px;
-  line-height: 27px;
+  line-height: 1.5882352941;
   max-width: 1140px;
   margin: auto;
   -webkit-font-smoothing: antialiased;
@@ -27,15 +27,18 @@ h1 {
 
 h2 {
   font-size: 28px;
-  line-height: 36px;
-  padding-right: 52px; }
+  line-height: 36px; }
 
 h3 {
   font-size: 17px;
   line-height: 27px; }
 
+ul, ol {
+  padding: 1em 0 1em 1.5em; }
+  ul ul, ul ol, ol ul, ol ol {
+    font-size: 80%; }
+
 .subheading {
-  padding-right: 52px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px; }
@@ -50,51 +53,55 @@ a {
 section {
   clear: both; }
 
-header {
+#nav {
   padding: 24px 10.5263157895%;
   background-color: #33272C;
   display: flex;
   justify-content: space-between;
   align-items: flex-end; }
-  header nav ul {
+  #nav nav ul {
     list-style: none; }
-    header nav ul li {
+    #nav nav ul li {
       display: inline-block;
       list-style: none; }
-      header nav ul li a {
+      #nav nav ul li a {
         color: #FFF;
         font-size: 16px;
         font-weight: 600;
         padding: 10px; }
 
-.showcase {
+.homepage-showcase {
   display: grid;
   grid-template-columns: 41.6666666667% 16.6666666667% 41.6666666667%;
   grid-template-rows: auto; }
-  .showcase div {
+  .homepage-showcase div {
     padding: 72px 8.4210526316%;
     background-size: cover;
     background-position: 50% 50%; }
-  .showcase .image,
-  .showcase .wide {
+  .homepage-showcase h2 {
+    padding-right: 52px; }
+  .homepage-showcase .subheading {
+    padding-right: 52px; }
+  .homepage-showcase .image,
+  .homepage-showcase .wide {
     padding-left: 17.4436090226%;
     padding-right: 17.4436090226%; }
-  .showcase .image {
+  .homepage-showcase .image {
     color: #FFF; }
-  .showcase .wide {
+  .homepage-showcase .wide {
     grid-column-end: span 2; }
-  .showcase .tall {
+  .homepage-showcase .tall {
     grid-row-end: span 2; }
-  .showcase .blue {
+  .homepage-showcase .blue {
     background-color: #4B7CFF;
     color: #FFF; }
-  .showcase .white {
+  .homepage-showcase .white {
     background-color: #FFF; }
-  .showcase a {
+  .homepage-showcase a {
     font-weight: bold;
     display: inline-block; }
-  .showcase a.white,
-  .showcase a.blue {
+  .homepage-showcase a.white,
+  .homepage-showcase a.blue {
     padding: 18px; }
 
 @media (max-width: 768px) {
@@ -257,3 +264,113 @@ footer {
 @media (max-width: 400px) {
   #happlications {
     grid-template-columns: 1fr 1fr 1fr; } }
+
+.cool-header {
+  text-align: center;
+  padding: 90px 32px 70px;
+  color: white;
+  background: #33272C; }
+  .cool-header .subheading {
+    display: block;
+    padding-top: 18px; }
+
+#articles section {
+  padding: 80px 0 18px; }
+  #articles section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #articles section img {
+    float: left;
+    width: 58.7719%;
+    margin-left: 10.5263%; }
+  #articles section .description {
+    float: right;
+    margin-top: 42px;
+    margin-right: 4.0351%;
+    width: 21.7544%; }
+  #articles section header {
+    clear: both;
+    float: left;
+    position: relative;
+    top: -60px;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 24px;
+    padding-left: 38px;
+    width: 50%;
+    color: white;
+    background-color: #4B7CFF; }
+    #articles section header h2 {
+      padding: 0; }
+
+#articles section:nth-child(even) {
+  background-color: #F2F1F3; }
+  #articles section:nth-child(even) img {
+    float: right;
+    margin-left: 0;
+    margin-right: 10.5263%; }
+  #articles section:nth-child(even) .description {
+    float: left;
+    margin-right: 0;
+    margin-left: 4.0351%; }
+  #articles section:nth-child(even) header {
+    float: right; }
+
+#using-hap-intro {
+  padding: 60px 20.7894736842%; }
+  #using-hap-intro .hap-flavors {
+    padding: 0;
+    list-style: none;
+    font-size: 0; }
+    #using-hap-intro .hap-flavors li {
+      display: inline-block;
+      vertical-align: top;
+      width: 25%;
+      padding: 12px 2% 12px 0;
+      font-size: 13px;
+      line-height: 20px; }
+
+#using-hap-instructions section {
+  padding: 80px 04.0351% 60px;
+  background-color: #F2F1F3; }
+  #using-hap-instructions section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #using-hap-instructions section img, #using-hap-instructions section video, #using-hap-instructions section .under-media {
+    float: right;
+    clear: right;
+    width: 50%; }
+  #using-hap-instructions section .instructions {
+    float: left;
+    margin-right: 4.0351%;
+    margin-left: 4.0351%;
+    width: 40%; }
+  #using-hap-instructions section pre {
+    white-space: pre-wrap; }
+
+#using-hap-instructions section:nth-child(even) {
+  background-color: white; }
+  #using-hap-instructions section:nth-child(even) img, #using-hap-instructions section:nth-child(even) video, #using-hap-instructions section:nth-child(even) .under-media {
+    float: left;
+    clear: left; }
+  #using-hap-instructions section:nth-child(even) .instructions {
+    float: right; }
+
+#creative-coding {
+  padding: 60px 13.8596491228%; }
+  #creative-coding .environments {
+    padding: 0;
+    list-style: none;
+    font-size: 0; }
+    #creative-coding .environments li {
+      display: inline-block;
+      vertical-align: top;
+      width: 20%;
+      padding: 12px 2% 12px 0;
+      font-size: 13px;
+      line-height: 20px; }
+      #creative-coding .environments li img {
+        margin-top: 12px;
+        width: 100%; }
