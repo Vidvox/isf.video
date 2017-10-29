@@ -1,5 +1,6 @@
 $blue: #4B7CFF;
 $dark-grey: #33272C;
+$light-grey: #F2F1F3;
 
 * {
     margin:             0;
@@ -45,6 +46,7 @@ h3 {
 }
 
 ul, ol {
+    list-style: square;
     padding: 1em 0 1em 1.5em;
     ul, ol {
         font-size: 80%;
@@ -221,10 +223,13 @@ section.image {
         padding: 0;
         text-align: right;
     }
-    p {
+    p, ul, ol {
         float: right;
         width: 40.2631578947%;
         margin: 0 16.2280701754% 0.5em 0;
+    }
+    &.grey {
+        background-color: $light-grey;
     }
 }
 @media (max-width: 768px) {
@@ -232,7 +237,7 @@ section.image {
         div+div {
             margin-top: 21px;
         }
-        h2, p {
+        h2, p, ul, ol {
             float: none;
             width: auto;
             padding: 0;
@@ -374,7 +379,7 @@ footer {
         }
     }
     section:nth-child(even) {
-        background-color: #F2F1F3;
+        background-color: $light-grey;
         img {
             float: right;
             margin-left: 0;
@@ -422,12 +427,7 @@ footer {
             clear: right;
             width: 50%;
         }
-        .instructions {
-            float: left;
-            margin-right: 4.0351%;
-            margin-left: 4.0351%;
-            width: 40%;
-        }
+
         pre {
             white-space: pre-wrap;
         }
@@ -442,6 +442,19 @@ footer {
             float: right;
         }
     }
+}
+
+.instructions {
+    float: left;
+    margin-right: 4.0351%;
+    margin-left: 4.0351%;
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+.instructions {
+    width: auto;
+}
 }
 
 #creative-coding {

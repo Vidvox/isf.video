@@ -34,6 +34,7 @@ h3 {
   line-height: 27px; }
 
 ul, ol {
+  list-style: square;
   padding: 1em 0 1em 1.5em; }
   ul ul, ul ol, ol ul, ol ol {
     font-size: 80%; }
@@ -182,15 +183,17 @@ section.image {
     margin-left: 10.5263157895%;
     padding: 0;
     text-align: right; }
-  .big-labels p {
+  .big-labels p, .big-labels ul, .big-labels ol {
     float: right;
     width: 40.2631578947%;
     margin: 0 16.2280701754% 0.5em 0; }
+  .big-labels.grey {
+    background-color: #F2F1F3; }
 
 @media (max-width: 768px) {
   .big-labels div + div {
     margin-top: 21px; }
-  .big-labels h2, .big-labels p {
+  .big-labels h2, .big-labels p, .big-labels ul, .big-labels ol {
     float: none;
     width: auto;
     padding: 0;
@@ -342,11 +345,6 @@ footer {
     float: right;
     clear: right;
     width: 50%; }
-  #using-hap-instructions section .instructions {
-    float: left;
-    margin-right: 4.0351%;
-    margin-left: 4.0351%;
-    width: 40%; }
   #using-hap-instructions section pre {
     white-space: pre-wrap; }
 
@@ -357,6 +355,16 @@ footer {
     clear: left; }
   #using-hap-instructions section:nth-child(even) .instructions {
     float: right; }
+
+.instructions {
+  float: left;
+  margin-right: 4.0351%;
+  margin-left: 4.0351%;
+  width: 40%; }
+
+@media (max-width: 768px) {
+  .instructions {
+    width: auto; } }
 
 #creative-coding {
   padding: 60px 13.8596491228%; }
