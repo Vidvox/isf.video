@@ -72,6 +72,17 @@ section {
     clear: both;
 }
 
+.grey {
+    background-color: $light-grey;
+}
+
+.divider-top {
+    border-top: 2px solid $light-grey;
+}
+.divider-bottom {
+    border-bottom: 2px solid $light-grey;
+}
+
 #nav {
     padding: 24px 10.5263157895%;
     background-color: #33272C;
@@ -163,6 +174,11 @@ section {
         margin-left: 10%;
     }
 }
+.two-column.even {
+    grid-template-columns: 49% 49%;
+    grid-gap: 2%;
+    align-items: start;
+}
 @media (max-width: 768px) {
     .two-column {
         display: block;
@@ -228,9 +244,6 @@ section.image {
         width: 40.2631578947%;
         margin: 0 16.2280701754% 0.5em 0;
     }
-    &.grey {
-        background-color: $light-grey;
-    }
 }
 @media (max-width: 768px) {
     .big-labels {
@@ -289,7 +302,7 @@ footer {
     list-style: none;
     font-size: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     grid-column-gap: 32px;
     grid-row-gap: 32px;
@@ -313,8 +326,7 @@ footer {
             line-height: 1;
         }
         img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
         }
     }
 }
@@ -452,9 +464,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-.instructions {
-    width: auto;
-}
+    .instructions {
+        width: auto;
+    }
 }
 
 #creative-coding {
@@ -467,6 +479,28 @@ footer {
             display: inline-block;
             vertical-align: top;
             width: 20%;
+            padding: 12px 2% 12px 0;
+            font-size: 13px;
+            line-height: 20px;
+            img {
+                margin-top: 12px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.centered-block {
+    padding: 60px 13.8596491228%;
+    ul {
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+        display: flex;
+        justify-content: center;
+        li {
+            width: 26%;
+            margin: 0 2%;
             padding: 12px 2% 12px 0;
             font-size: 13px;
             line-height: 20px;

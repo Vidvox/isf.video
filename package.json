@@ -13,8 +13,8 @@
     "url": "git://github.com/dlublin/hapcodecssite"
   },
   "dependencies": {
-    "gulp"           			: "x",
-    "gulp-ejs" 						: "x",
-    "gulp-sass"      			: "x"
+    "gulp": "x",
+    "gulp-ejs": "x",
+    "gulp-sass": "x"
   }
 }
