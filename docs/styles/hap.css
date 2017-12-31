@@ -64,21 +64,76 @@ section {
   border-bottom: 2px solid #F2F1F3; }
 
 #nav {
-  padding: 24px 10.5263157895%;
+  position: relative;
   background-color: #33272C;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end; }
-  #nav nav ul {
-    list-style: none; }
-    #nav nav ul li {
-      display: inline-block;
-      list-style: none; }
-      #nav nav ul li a {
-        color: #FFF;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 10px; }
+  transition: all 400ms ease; }
+  #nav #logo img {
+    transition: all 400ms ease; }
+  @media (min-width: 900px) {
+    #nav {
+      height: 110px;
+      padding: 24px 10.5263157895%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end; }
+      #nav .hamburger {
+        display: none; }
+      #nav nav {
+        position: absolute;
+        right: 10.5263157895%;
+        bottom: 0px;
+        padding-left: calc(128px + 10.5263157895%); }
+        #nav nav ul {
+          list-style: none; }
+          #nav nav ul li {
+            display: inline-block;
+            list-style: none; }
+            #nav nav ul li a {
+              color: #FFF;
+              font-size: 16px;
+              font-weight: 600;
+              padding: 10px; } }
+  @media (max-width: 899px) {
+    #nav {
+      padding: 8px 5.263157895%; }
+      #nav #logo img {
+        width: 68px; }
+      #nav nav {
+        display: none; }
+      #nav .hamburger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 5.263157895%;
+        bottom: 0;
+        width: 48px;
+        height: 48px;
+        transition: all 0.25s; }
+      #nav .hamburger__top-bun,
+      #nav .hamburger__bottom-bun {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 15px;
+        width: 18px;
+        height: 2px;
+        background: #FFF;
+        transform: rotate(0);
+        transition: all 0.25s; }
+      #nav .hamburger:hover [class*="-bun"] {
+        background: #AAA; }
+      #nav .hamburger__top-bun {
+        top: 23px;
+        transform: translateY(-3px); }
+      #nav .hamburger__bottom-bun {
+        bottom: 23px;
+        transform: translateY(3px); }
+      #nav .open {
+        transform: rotate(90deg); }
+      #nav .open .hamburger__top-bun {
+        transform: rotate(45deg) translateY(0px); }
+      #nav .open .hamburger__bottom-bun {
+        transform: rotate(-45deg) translateY(0px); } }
 
 .homepage-showcase {
   display: grid;

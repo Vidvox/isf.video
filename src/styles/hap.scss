@@ -84,25 +84,99 @@ section {
 }
 
 #nav {
-    padding: 24px 10.5263157895%;
+    position: relative;
     background-color: #33272C;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    nav {
-        ul {
-            list-style: none;
-            li {
-                display: inline-block;
+    transition: all 400ms ease;
+    #logo img {
+        transition: all 400ms ease;
+    }
+    @media (min-width: 900px) {
+        height: 110px;
+        padding: 24px 10.5263157895%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .hamburger {
+            display: none;
+        }
+        nav {
+            position: absolute;
+            right: 10.5263157895%;
+            bottom: 0px;
+            padding-left: calc(128px + 10.5263157895%;);
+            ul {
                 list-style: none;
-                a {
-                    color: #FFF;
-                    font-size: 16px;
-                    font-weight: 600;
-                    padding: 10px;
+                li {
+                    display: inline-block;
+                    list-style: none;
+                    a {
+                        color: #FFF;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 10px;
+                    }
                 }
             }
         }
+    }
+    @media (max-width: 899px) {
+        #logo img {
+            width: 68px;
+        }
+        padding: 8px 5.263157895%;
+        nav {
+            display: none;
+        }
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            right: 5.263157895%;
+            bottom: 0;
+            width: 48px;
+            height: 48px;
+            transition: all 0.25s;
+        }
+
+        .hamburger__top-bun,
+        .hamburger__bottom-bun {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 15px;
+            width: 18px;
+            height: 2px;
+            background: #FFF;
+            transform: rotate(0);
+            transition: all 0.25s;
+        }
+
+        .hamburger:hover [class*="-bun"] {
+            background: #AAA;
+        }
+
+        .hamburger__top-bun {
+            top: 23px;
+            transform: translateY(-3px);
+        }
+
+        .hamburger__bottom-bun {
+            bottom: 23px;
+            transform: translateY(3px);
+        }
+
+        .open {
+            transform: rotate(90deg);
+        }
+
+        .open .hamburger__top-bun {
+            transform: rotate(45deg) translateY(0px);
+        }
+
+        .open .hamburger__bottom-bun {
+            transform: rotate(-45deg) translateY(0px);
+        }
+
     }
 }
 
