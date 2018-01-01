@@ -63,6 +63,11 @@ section {
 .divider-bottom {
   border-bottom: 2px solid #F2F1F3; }
 
+html.noscroll,
+html.noscroll body {
+  height: 100%;
+  overflow: hidden; }
+
 #nav {
   position: relative;
   background-color: #33272C;
