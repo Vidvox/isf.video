@@ -69,6 +69,14 @@ section {
   transition: all 400ms ease; }
   #nav #logo img {
     transition: all 400ms ease; }
+  #nav nav ul {
+    list-style: none;
+    padding: 0; }
+  #nav nav a {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px; }
   @media (min-width: 900px) {
     #nav {
       height: 110px;
@@ -81,31 +89,38 @@ section {
       #nav nav {
         position: absolute;
         right: 10.5263157895%;
-        bottom: 0px;
+        top: 66px;
         padding-left: calc(128px + 10.5263157895%); }
-        #nav nav ul {
-          list-style: none; }
-          #nav nav ul li {
-            display: inline-block;
-            list-style: none; }
-            #nav nav ul li a {
-              color: #FFF;
-              font-size: 16px;
-              font-weight: 600;
-              padding: 10px; } }
+        #nav nav ul li {
+          display: inline-block; } }
   @media (max-width: 899px) {
     #nav {
       padding: 8px 5.263157895%; }
       #nav #logo img {
         width: 68px; }
       #nav nav {
-        display: none; }
+        transition: height 200ms ease-in;
+        height: 0;
+        overflow: hidden;
+        text-align: center;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background: #33272C; }
+        #nav nav ul {
+          padding-top: 24px; }
+        #nav nav a {
+          font-size: 22px;
+          line-height: 2; }
+        #nav nav.open {
+          height: calc(100vh - 20px); }
       #nav .hamburger {
         display: block;
         cursor: pointer;
         position: absolute;
+        top: 2px;
         right: 5.263157895%;
-        bottom: 0;
         width: 48px;
         height: 48px;
         transition: all 0.25s; }
@@ -128,11 +143,11 @@ section {
       #nav .hamburger__bottom-bun {
         bottom: 23px;
         transform: translateY(3px); }
-      #nav .open {
+      #nav .hamburger.open {
         transform: rotate(90deg); }
-      #nav .open .hamburger__top-bun {
+      #nav .hamburger.open .hamburger__top-bun {
         transform: rotate(45deg) translateY(0px); }
-      #nav .open .hamburger__bottom-bun {
+      #nav .hamburger.open .hamburger__bottom-bun {
         transform: rotate(-45deg) translateY(0px); } }
 
 .homepage-showcase {

@@ -5,5 +5,5 @@ $( function() {
 } )
 
 $('.hamburger').click (function(){
-  $(this).toggleClass('open');
+  $(this).add('#nav nav').toggleClass('open');
 });
