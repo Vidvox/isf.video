@@ -27,7 +27,7 @@ h1 {
 
 h2 {
   font-size: 28px;
-  line-height: 36px; }
+  line-height: 1.285714286; }
 
 h3 {
   font-size: 17px;
@@ -109,6 +109,7 @@ html.noscroll body {
         overflow: hidden;
         text-align: center;
         position: fixed;
+        z-index: 1;
         top: 50px;
         left: 0;
         right: 0;
@@ -190,7 +191,7 @@ html.noscroll body {
     padding: 18px; }
 
 @media (max-width: 768px) {
-  .showcase {
+  .homepage-showcase {
     display: block; } }
 
 .two-column {
@@ -345,6 +346,11 @@ footer {
       line-height: 1; }
     .happlications li img {
       width: 100%; }
+  @media (max-width: 768px) {
+    .happlications {
+      display: block; }
+      .happlications li {
+        margin: 24px 0; } }
 
 @media (max-width: 768px) {
   #happlications {
@@ -406,6 +412,32 @@ footer {
   #articles section:nth-child(even) header {
     float: right; }
 
+@media (max-width: 768px) {
+  #articles section,
+  #articles section:nth-child(even) {
+    position: relative;
+    padding-top: 9em;
+    padding-bottom: 4em; }
+    #articles section img,
+    #articles section .description,
+    #articles section:nth-child(even) img,
+    #articles section:nth-child(even) .description {
+      display: block;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 83.157894737%; }
+    #articles section header,
+    #articles section:nth-child(even) header {
+      position: absolute;
+      top: 0;
+      float: none;
+      width: 100%;
+      padding: 12px 8.4210526316%; }
+      #articles section header h2,
+      #articles section:nth-child(even) header h2 {
+        font-size: 20px; } }
+
 #using-hap-intro {
   padding: 60px 20.7894736842%; }
   #using-hap-intro .hap-flavors {
@@ -419,6 +451,13 @@ footer {
       padding: 12px 2% 12px 0;
       font-size: 13px;
       line-height: 20px; }
+  @media (max-width: 768px) {
+    #using-hap-intro {
+      padding-left: 8.4210526316%;
+      padding-right: 8.4210526316%; }
+      #using-hap-intro .hap-flavors li {
+        display: block;
+        width: auto; } }
 
 #using-hap-instructions section {
   padding: 80px 04.0351% 60px;
@@ -431,6 +470,10 @@ footer {
     float: right;
     clear: right;
     width: 50%; }
+    @media (max-width: 768px) {
+      #using-hap-instructions section img, #using-hap-instructions section video, #using-hap-instructions section .under-media {
+        float: none;
+        width: 100%; } }
   #using-hap-instructions section pre {
     white-space: pre-wrap; }
 
@@ -468,6 +511,13 @@ footer {
       #creative-coding .environments li img {
         margin-top: 12px;
         width: 100%; }
+  @media (max-width: 768px) {
+    #creative-coding {
+      padding-left: 8.4210526316%;
+      padding-right: 8.4210526316%; }
+      #creative-coding .environments li {
+        display: block;
+        width: auto; } }
 
 .centered-block {
   padding: 60px 13.8596491228%; }
@@ -486,3 +536,14 @@ footer {
       .centered-block ul li img {
         margin-top: 12px;
         width: 100%; }
+  @media (max-width: 768px) {
+    .centered-block {
+      padding-left: 8.4210526316%;
+      padding-right: 8.4210526316%; }
+      .centered-block ul {
+        display: block; }
+        .centered-block ul li {
+          width: auto;
+          margin: 0;
+          padding-left: 0;
+          padding-right: 0; } }

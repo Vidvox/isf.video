@@ -37,7 +37,7 @@ h1 {
 
 h2 {
     font-size: 28px;
-    line-height: 36px;
+    line-height: 1.285714286;
 }
 
 h3 {
@@ -137,6 +137,7 @@ html.noscroll body {height: 100%; overflow: hidden}
             overflow: hidden;
             text-align: center;
             position: fixed;
+            z-index: 1;
             top: 50px;
             left: 0;
             right: 0;
@@ -162,7 +163,6 @@ html.noscroll body {height: 100%; overflow: hidden}
             height: 48px;
             transition: all 0.25s;
         }
-
         .hamburger__top-bun,
         .hamburger__bottom-bun {
             content: '';
@@ -175,33 +175,26 @@ html.noscroll body {height: 100%; overflow: hidden}
             transform: rotate(0);
             transition: all 0.25s;
         }
-
         .hamburger:hover [class*="-bun"] {
             background: #AAA;
         }
-
         .hamburger__top-bun {
             top: 23px;
             transform: translateY(-3px);
         }
-
         .hamburger__bottom-bun {
             bottom: 23px;
             transform: translateY(3px);
         }
-
         .hamburger.open {
             transform: rotate(90deg);
         }
-
         .hamburger.open .hamburger__top-bun {
             transform: rotate(45deg) translateY(0px);
         }
-
         .hamburger.open .hamburger__bottom-bun {
             transform: rotate(-45deg) translateY(0px);
         }
-
     }
 }
 
@@ -251,7 +244,7 @@ html.noscroll body {height: 100%; overflow: hidden}
     }
 }
 @media (max-width: 768px) {
-    .showcase {
+    .homepage-showcase {
         display: block;
     }
 }
@@ -428,6 +421,12 @@ footer {
             width: 100%;
         }
     }
+    @media (max-width: 768px) {
+        display: block;
+        li {
+            margin: 24px 0;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -505,6 +504,32 @@ footer {
             float: right;
         }
     }
+    @media (max-width: 768px) {
+        section,
+        section:nth-child(even) {
+            position: relative;
+            padding-top: 9em;
+            padding-bottom: 4em;
+            img,
+            .description {
+                display: block;
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+                width: 83.157894737%;
+            }
+            header{
+                position: absolute;
+                top: 0;
+                float: none;
+                width: 100%;
+                padding: 12px 8.4210526316%;
+                h2 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }
 
 #using-hap-intro {
@@ -522,6 +547,16 @@ footer {
             line-height: 20px;
         }
     }
+    @media (max-width: 768px) {
+        padding-left: 8.4210526316%;
+        padding-right: 8.4210526316%;
+        .hap-flavors {
+            li {
+                display: block;
+                width: auto;
+            }
+        }
+    }
 }
 
 #using-hap-instructions {
@@ -537,6 +572,10 @@ footer {
             float: right;
             clear: right;
             width: 50%;
+            @media (max-width: 768px) {
+                float: none;
+                width: 100%;
+            }
         }
 
         pre {
@@ -587,6 +626,16 @@ footer {
             }
         }
     }
+    @media (max-width: 768px) {
+        padding-left: 8.4210526316%;
+        padding-right: 8.4210526316%;
+        .environments {
+            li {
+                display: block;
+                width: auto;
+            }
+        }
+    }
 }
 
 .centered-block {
@@ -609,4 +658,18 @@ footer {
             }
         }
     }
+    @media (max-width: 768px) {
+        padding-left: 8.4210526316%;
+        padding-right: 8.4210526316%;
+        ul {
+            display: block;
+            li {
+                width: auto;
+                margin: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
 }
