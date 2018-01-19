@@ -14,6 +14,7 @@ img {
 
 html {
     box-sizing:         border-box;
+    background-color:   #F5F5F5;
 }
 
 *, *:before, *:after {
@@ -24,10 +25,12 @@ body {
     font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, arial, sans-serif;
     font-size: 17px;
     line-height: 1.5882352941;
-    max-width: 1140px;
+    max-width: 1400px;
     margin: auto;
     -webkit-font-smoothing: antialiased;
     color: #353535;
+    box-shadow: 0 0 20px #DDD;
+    background: #FFF;
 }
 
 h1 {
@@ -419,6 +422,13 @@ footer {
         }
         img {
             width: 100%;
+            filter: grayscale(100%);
+            transform: scale(0.95);
+            transition: all 200ms ease;
+        }
+        &:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
         }
     }
     @media (max-width: 768px) {
@@ -533,7 +543,7 @@ footer {
 }
 
 #using-hap-intro {
-    padding: 60px 20.7894736842%;
+    padding: 60px 10.5263157895%;
     .hap-flavors {
         padding: 0;
         list-style: none;
@@ -559,9 +569,16 @@ footer {
     }
 }
 
+.instructions {
+    float: left;
+    margin-right: 4.0351%;
+    margin-left: 4.0351%;
+    width: 40%;
+}
+
 #using-hap-instructions {
     section {
-        padding: 80px 04.0351% 60px;
+        padding: 80px 10.5263157895% 60px;
         background-color: #F2F1F3;
         &:after {
             content: "";
@@ -582,6 +599,11 @@ footer {
             white-space: pre-wrap;
         }
     }
+    section:nth-child(odd) {
+        .instructions {
+            margin-left: 0;
+        }
+    }
     section:nth-child(even) {
         background-color: white;
         img, video, .under-media {
@@ -590,16 +612,11 @@ footer {
         }
         .instructions {
             float: right;
+            margin-right: 0;
         }
     }
 }
 
-.instructions {
-    float: left;
-    margin-right: 4.0351%;
-    margin-left: 4.0351%;
-    width: 40%;
-}
 
 @media (max-width: 768px) {
     .instructions {

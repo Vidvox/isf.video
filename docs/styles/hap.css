@@ -7,7 +7,8 @@ img {
   vertical-align: middle; }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #F5F5F5; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -16,10 +17,12 @@ body {
   font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, arial, sans-serif;
   font-size: 17px;
   line-height: 1.5882352941;
-  max-width: 1140px;
+  max-width: 1400px;
   margin: auto;
   -webkit-font-smoothing: antialiased;
-  color: #353535; }
+  color: #353535;
+  box-shadow: 0 0 20px #DDD;
+  background: #FFF; }
 
 h1 {
   font-size: 45px;
@@ -345,7 +348,13 @@ footer {
       padding: 6px 7px 5px 6px;
       line-height: 1; }
     .happlications li img {
-      width: 100%; }
+      width: 100%;
+      filter: grayscale(100%);
+      transform: scale(0.95);
+      transition: all 200ms ease; }
+    .happlications li:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.05); }
   @media (max-width: 768px) {
     .happlications {
       display: block; }
@@ -439,7 +448,7 @@ footer {
         font-size: 20px; } }
 
 #using-hap-intro {
-  padding: 60px 20.7894736842%; }
+  padding: 60px 10.5263157895%; }
   #using-hap-intro .hap-flavors {
     padding: 0;
     list-style: none;
@@ -459,8 +468,14 @@ footer {
         display: block;
         width: auto; } }
 
+.instructions {
+  float: left;
+  margin-right: 4.0351%;
+  margin-left: 4.0351%;
+  width: 40%; }
+
 #using-hap-instructions section {
-  padding: 80px 04.0351% 60px;
+  padding: 80px 10.5263157895% 60px;
   background-color: #F2F1F3; }
   #using-hap-instructions section:after {
     content: "";
@@ -477,19 +492,17 @@ footer {
   #using-hap-instructions section pre {
     white-space: pre-wrap; }
 
+#using-hap-instructions section:nth-child(odd) .instructions {
+  margin-left: 0; }
+
 #using-hap-instructions section:nth-child(even) {
   background-color: white; }
   #using-hap-instructions section:nth-child(even) img, #using-hap-instructions section:nth-child(even) video, #using-hap-instructions section:nth-child(even) .under-media {
     float: left;
     clear: left; }
   #using-hap-instructions section:nth-child(even) .instructions {
-    float: right; }
-
-.instructions {
-  float: left;
-  margin-right: 4.0351%;
-  margin-left: 4.0351%;
-  width: 40%; }
+    float: right;
+    margin-right: 0; }
 
 @media (max-width: 768px) {
   .instructions {
