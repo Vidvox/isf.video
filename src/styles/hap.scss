@@ -690,3 +690,24 @@ footer {
     }
 
 }
+
+.cta-bar {
+    padding: 32px;
+    background: $blue;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    .subheading {
+        margin-bottom: 15px;
+    }
+    a {
+        color: inherit;
+        font-size: 16px;
+        img {
+            margin-left: 15px;
+        }
+    }
+    @media (max-width: 768px) {
+        border-bottom: 2px solid #FFF;
+    }
+}
