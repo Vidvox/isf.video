@@ -106,6 +106,9 @@ html.noscroll body {height: 100%; overflow: hidden}
             font-size: 16px;
             font-weight: 600;
             padding: 10px;
+            &:hover {
+                color: $blue;
+            }
         }
     }
     @media (min-width: 900px) {
@@ -138,7 +141,7 @@ html.noscroll body {height: 100%; overflow: hidden}
             transition: height 200ms ease-in;
             height: 0;
             overflow: hidden;
-            text-align: center;
+            // text-align: center;
             position: fixed;
             z-index: 1;
             top: 50px;
@@ -151,6 +154,10 @@ html.noscroll body {height: 100%; overflow: hidden}
             a {
                 font-size: 22px;
                 line-height: 2;
+                display: block;
+                width: 200px;
+                margin: 0 auto;
+                white-space: nowrap;
             }
             &.open {
                 height: calc(100vh - 20px);

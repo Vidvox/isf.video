@@ -85,6 +85,8 @@ html.noscroll body {
     font-size: 16px;
     font-weight: 600;
     padding: 10px; }
+    #nav nav a:hover {
+      color: #4B7CFF; }
   @media (min-width: 900px) {
     #nav {
       height: 110px;
@@ -110,7 +112,6 @@ html.noscroll body {
         transition: height 200ms ease-in;
         height: 0;
         overflow: hidden;
-        text-align: center;
         position: fixed;
         z-index: 1;
         top: 50px;
@@ -121,7 +122,11 @@ html.noscroll body {
           padding-top: 24px; }
         #nav nav a {
           font-size: 22px;
-          line-height: 2; }
+          line-height: 2;
+          display: block;
+          width: 200px;
+          margin: 0 auto;
+          white-space: nowrap; }
         #nav nav.open {
           height: calc(100vh - 20px); }
       #nav .hamburger {
