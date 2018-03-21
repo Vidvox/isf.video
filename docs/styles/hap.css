@@ -306,13 +306,16 @@ footer {
   color: #9394A1;
   display: flex;
   justify-content: space-between;
-  font-size: 16px; }
+  align-items: center;
+  color: #dark-grey;
+  font-size: 16px;
+  font-weight: 600; }
   footer ul, footer li {
     display: inline; }
   footer a {
-    display: inline-block;
-    color: inherit;
-    text-decoration: underline; }
+    display: inline-block; }
+  footer ul {
+    padding: 12px 0; }
   footer .footer-links a {
     margin: 0 8px; }
   footer .social-links a {

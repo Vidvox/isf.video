@@ -373,14 +373,19 @@ footer {
     color: #9394A1;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    color: #dark-grey;
     font-size: 16px;
+    font-weight: 600;
+
     ul, li {
         display: inline;
     }
     a {
         display: inline-block;
-        color: inherit;
-        text-decoration: underline;
+    }
+    ul {
+        padding: 12px 0;
     }
     .footer-links a {
         margin: 0 8px;
