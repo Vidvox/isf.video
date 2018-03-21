@@ -85,6 +85,8 @@ html.noscroll body {
     font-size: 16px;
     font-weight: 600;
     padding: 10px; }
+    #nav nav a.active {
+      text-decoration: underline; }
     #nav nav a:hover {
       color: #4B7CFF; }
   @media (min-width: 900px) {

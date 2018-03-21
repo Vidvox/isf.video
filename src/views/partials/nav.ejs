@@ -9,11 +9,11 @@
 
   <nav>
     <ul>
-      <li><a href="./showcase.html" title="">Showcase</a></li>
-      <li><a href="./using-hap.html" title="">Using Hap</a></li>
-      <li><a href="./integrations.html" title="">Integrations</a></li>
-      <li><a href="./benchmarks.html" title="">Benchmarks</a></li>
-      <li><a href="./developers.html" title="">Developers</a></li>
+      <li><a href="./showcase.html" <% if (page_name === 'showcase') { %>class="active" <% } %> title="">Showcase</a></li>
+      <li><a href="./using-hap.html" <% if (page_name === 'using-hap') { %>class="active" <% } %> title="">Using Hap</a></li>
+      <li><a href="./integrations.html" <% if (page_name === 'integrations') { %>class="active" <% } %> title="">Integrations</a></li>
+      <li><a href="./benchmarks.html" <% if (page_name === 'benchmarks') { %>class="active" <% } %> title="">Benchmarks</a></li>
+      <li><a href="./developers.html" <% if (page_name === 'developers') { %>class="active" <% } %> title="">Developers</a></li>
     </ul>
   </nav>
 
