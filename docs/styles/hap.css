@@ -330,54 +330,41 @@ footer {
     display: block;
     margin: 16px 10%; } }
 
-.happlications {
-  margin: 60px 2.1052631579%;
-  list-style: none;
-  font-size: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  align-items: center;
-  grid-column-gap: 32px;
-  grid-row-gap: 32px; }
-  .happlications li {
+section.integrations {
+  margin-top: 52px;
+  margin-bottom: 65px; }
+  section.integrations .glyph {
+    display: block;
+    margin: 0 auto -35px;
+    max-width: 275px; }
+  section.integrations header {
     position: relative;
-    height: 100%; }
-    .happlications li span {
-      position: absolute;
-      left: -0.5em;
-      bottom: -0.5em;
-      max-width: 90%;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 10px;
-      background: black;
-      color: white;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      padding: 6px 7px 5px 6px;
-      line-height: 1; }
-    .happlications li img {
-      width: 100%;
-      filter: grayscale(100%);
-      transform: scale(0.95);
-      transition: all 200ms ease; }
-    .happlications li:hover img {
-      filter: grayscale(0%);
-      transform: scale(1.05); }
-  @media (max-width: 768px) {
-    .happlications {
-      display: block; }
-      .happlications li {
-        margin: 24px 0; } }
-
-@media (max-width: 768px) {
-  #happlications {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; } }
-
-@media (max-width: 400px) {
-  #happlications {
-    grid-template-columns: 1fr 1fr 1fr; } }
+    margin-bottom: 47px;
+    background: #4B7CFF;
+    width: 50%;
+    padding: 24px 2.653508772% 33px 10.614035088%;
+    line-height: 1;
+    color: white; }
+  section.integrations ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10.5263158%;
+    list-style: none; }
+    section.integrations ul li {
+      width: calc(20% - 13px);
+      margin-right: 13px;
+      margin-bottom: 13px;
+      text-align: center;
+      background-color: #F2F1F3; }
+      section.integrations ul li img {
+        margin-top: 30px;
+        width: calc(100% - 60px); }
+      section.integrations ul li span {
+        display: block;
+        margin: 16px 10px 17px;
+        font-size: 12px;
+        line-height: 1.333333333;
+        color: #33272C; }
 
 .cool-header {
   text-align: center;

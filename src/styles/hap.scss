@@ -407,62 +407,47 @@ footer {
 }
 
 
-.happlications {
-    margin: 60px 2.1052631579%;
-    list-style: none;
-    font-size: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    grid-column-gap: 32px;
-    grid-row-gap: 32px;
-    li {
-        position: relative;
-        height: 100%;
-        span {
-            position: absolute;
-            left: -0.5em;
-            bottom: -0.5em;
-            max-width: 90%;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 10px;
-            background: black;
-            color: white;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            padding: 6px 7px 5px 6px;
-            line-height: 1;
-        }
-        img {
-            width: 100%;
-            filter: grayscale(100%);
-            transform: scale(0.95);
-            transition: all 200ms ease;
-        }
-        &:hover img {
-            filter: grayscale(0%);
-            transform: scale(1.05);
-        }
-    }
-    @media (max-width: 768px) {
+// Integations page
+section.integrations {
+    margin-top: 52px;
+    margin-bottom: 65px;
+    .glyph {
         display: block;
+        margin: 0 auto -35px;
+        max-width: 275px;
+    }
+    header {
+        position: relative;
+        margin-bottom: 47px;
+        background: $blue;
+        width: 50%;
+        padding: 24px 2.653508772% 33px 10.614035088%;
+        line-height: 1;
+        color: white;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10.5263158%;
+        list-style: none;
         li {
-            margin: 24px 0;
+            width: calc(20% - 13px);
+            margin-right: 13px;
+            margin-bottom: 13px;
+            text-align: center;
+            background-color: $light-grey;
+            img {
+                margin-top: 30px;
+                width: calc(100% - 60px);
+            }
+            span {
+                display: block;
+                margin: 16px 10px 17px;
+                font-size: 12px;
+                line-height: 1.333333333;
+                color: $dark-grey;
+            }
         }
-    }
-}
-
-@media (max-width: 768px) {
-    #happlications {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-}
-
-@media (max-width: 400px) {
-    #happlications {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
