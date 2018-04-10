@@ -127,7 +127,7 @@ html.noscroll body {
           line-height: 2;
           display: block;
           width: 200px;
-          margin: 0 auto;
+          margin: 0 0 0 5.263157895%;
           white-space: nowrap; }
         #nav nav.open {
           height: calc(100vh - 20px); }

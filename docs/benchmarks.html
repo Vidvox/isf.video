@@ -19,14 +19,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="styles/hap.css">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#33272C">
-  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#33272C">
+  <link rel="shortcut icon" href="./images/favicon.ico">
 </head>
 
 <body>
+
 <header id="nav">
 
   <a id="logo" href="/" title="HAP"><img src="images/hap-logo.svg" width="104" height="35" alt="HAP" /></a>
@@ -74,8 +75,7 @@
     <p>While H.264 and ProRes are fine for basic media playback, the Hap codecs were designed for the situations that call for working with multiple layers of HD movies and larger ultra-HD resolutions. When using HAP most of the work for decoding the video frames during movie playback is handled by system graphics card, freeing up the CPU to perform other tasks.</p>
   </div>
   <div>
-    <img src="../images/benchmarks/performance.svg" alt="" />
-    <!-- http://jsfiddle.net/bvj7oeuf/4/ -->
+    <div id="benchmarks-performance"></div>
   </div>
 </section>
 
@@ -85,8 +85,7 @@
     <p>On average file sizes for HAP and HAP Q are often comparable to ProRes 422 – sometimes they will be bigger, sometimes smaller. For situations where an alpha channel is needed the HAP Alpha and HAP Q Alpha codecs can provide significant savings over ProRes 4444.</p>
   </div>
   <div>
-    <img src="../images/benchmarks/file-size.svg" alt="" />
-    <!-- http://jsfiddle.net/vgfdLo65/7/ -->
+    <div id="benchmarks-filesize"></div>
   </div>
 </section>
 
@@ -113,6 +112,11 @@
   <script src="scripts/jquery-2.2.4.min.js"></script>
   <script src="scripts/masonry.pkgd.min.js"></script>
   <script src="scripts/hap.js"></script>
+  
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="scripts/benchmarks.js"></script>
+  
 
   <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
@@ -122,3 +126,4 @@
 
 </body>
 </html>
+

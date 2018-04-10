@@ -1,6 +1,11 @@
   <script src="scripts/jquery-2.2.4.min.js"></script>
   <script src="scripts/masonry.pkgd.min.js"></script>
   <script src="scripts/hap.js"></script>
+  <% if (page_name === 'benchmarks') { %>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="scripts/benchmarks.js"></script>
+  <% } %>
 
   <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
