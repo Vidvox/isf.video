@@ -615,33 +615,46 @@ section.integrations {
             margin-right: 0;
         }
     }
-}
 
+    .instructions-wrapper {
+      display: flex;
 
-@media (max-width: 768px) {
-    .instructions {
-        width: auto;
+      .instructions {
+        flex: 0 0 50%;
+      }
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+
+        .instructions {
+          flex-basis: 100%;
+
+          .gist {
+            width: 100%;
+          }
+        }
+      }
     }
 }
 
 #creative-coding {
     padding: 60px 13.8596491228%;
     .environments {
-        padding: 0;
-        list-style: none;
-        font-size: 0;
-        li {
-            display: inline-block;
-            vertical-align: top;
-            width: 20%;
-            padding: 12px 2% 12px 0;
-            font-size: 13px;
-            line-height: 20px;
-            img {
-                margin-top: 12px;
-                width: 100%;
-            }
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+      justify-content: flex-start;
+
+      li {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        margin: 40px 0;
+
+        .description {
+          margin-top: 30px;
         }
+      }
     }
     @media (max-width: 768px) {
         padding-left: 8.4210526316%;
@@ -655,6 +668,27 @@ section.integrations {
     }
 }
 
+#playing-back {
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 10.5263157895%;
+    width: 29.7368421053%;
+    top: 28%;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      position: relative;
+      margin: 20px auto;
+      left: unset;
+      width: 50%;
+    }
+  }
+}
+
 .centered-block {
     padding: 60px 13.8596491228%;
     ul {
@@ -663,6 +697,7 @@ section.integrations {
         font-size: 0;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         li {
             flex: 0 0 calc((1/3) * 100%);
             padding: 0 12px;
@@ -677,10 +712,6 @@ section.integrations {
             }
             strong {
               display: block;
-            }
-            img {
-                margin-top: 12px;
-                width: 100%;
             }
 
             .benchmark-logo {

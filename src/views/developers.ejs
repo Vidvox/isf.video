@@ -8,24 +8,50 @@
     <span class="subheading">Supporting HAP in your applications</span>
 </header>
 
-<div id="creative-coding">
+<div id="creative-coding" class="centered-block">
     <h3>Creative Coding Environments</h3>
     <p>The following addons enable HAP support in popular creative coding environments:</p>
     <ul class="environments">
-        <li><a href="" title="OpenFrameworks via ofxHapPlayer" target="_blank"><strong>OpenFrameworks via ofxHapPlayer</strong><img src="images/integrations/apps/openframeworks.svg" alt="OpenFrameworks via ofxHapPlayer logo" /></a></li>
-        <li><a href="" title="Quartz Composer via CoGeHapPlayer" target="_blank"><strong>Quartz Composer via CoGeHapPlayer</strong><img src="images/integrations/apps/quartz-composer.png" alt="Quartz Composer via CoGeHapPlayer logo" /></a></li>
-        <li><a href="" title="Max via Hap Video Engine or jit.gl.hap" target="_blank"><strong>Max via Hap Video Engine or jit.gl.hap</strong><img src="images/integrations/apps/max.png" alt="Max via Hap Video Engine or jit.gl.hap logo" /></a></li>
-        <li><a href="" title="Cinder via Cinder-Hap" target="_blank"><strong>Cinder via Cinder-Hap</strong><img src="images/integrations/apps/cinder.png" alt="Cinder via Cinder-Hap logo" /></a></li>
-        <li><a href="" title="Unity via AV PRO QUICKTIME" target="_blank"><strong>Unity via AV PRO QUICKTIME</strong><img src="images/integrations/apps/unity.svg" alt="Unity via AV PRO QUICKTIME logo" /></a></li>
+      <li>
+        <img src="images/integrations/apps/openframeworks.svg" alt="OpenFrameworks via ofxHapPlayer logo" width="110"/>
+        <div class="description"><strong>HAP</strong>
+          <p>Dolor porro aspernatur ratione quisquam voluptatibus earum Officia eaque reiciendis aut impedit et Temporibus inventore ratione culpa praesentium molestiae! Nulla neque qui pariatur eveniet odit iste. Ducimus qui provident ad</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/integrations/apps/quartz-composer.png" alt="Quartz Composer via CoGeHapPlayer logo" width="73" />
+        <div class="description"><strong>HAP</strong>
+          <p>Dolor porro aspernatur ratione quisquam voluptatibus earum Officia eaque reiciendis aut impedit et Temporibus inventore ratione culpa praesentium molestiae! Nulla neque qui pariatur eveniet odit iste. Ducimus qui provident ad</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/integrations/apps/max.png" alt="Max via Hap Video Engine or jit.gl.hap logo" width="74" />
+        <div class="description"><strong>HAP</strong>
+          <p>Dolor porro aspernatur ratione quisquam voluptatibus earum Officia eaque reiciendis aut impedit et Temporibus inventore ratione culpa praesentium molestiae! Nulla neque qui pariatur eveniet odit iste. Ducimus qui provident ad</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/integrations/apps/cinder.png" alt="Cinder via Cinder-Hap logo" width="82" />
+        <div class="description"><strong>HAP</strong>
+          <p>Dolor porro aspernatur ratione quisquam voluptatibus earum Officia eaque reiciendis aut impedit et Temporibus inventore ratione culpa praesentium molestiae! Nulla neque qui pariatur eveniet odit iste. Ducimus qui provident ad</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/integrations/apps/unity.svg" alt="Unity via AV PRO QUICKTIME logo" width="84" />
+        <div class="description"><strong>HAP</strong>
+          <p>Dolor porro aspernatur ratione quisquam voluptatibus earum Officia eaque reiciendis aut impedit et Temporibus inventore ratione culpa praesentium molestiae! Nulla neque qui pariatur eveniet odit iste. Ducimus qui provident ad</p>
+        </div>
+      </li>
     </ul>
     <br /><br />
     <h3>Custom Software</h3>
     <p>If you are already using <a href="http://github.com/Vidvox/hap-in-avfoundation" title="GitHub repository for the VIDVOX AVFoundation framework">AVFoundation</a>, <a href="https://ffmpeg.org/" title="FFmpeg website">FFmpeg</a>, LibAV, <a href="http://www.renderheads.com/portfolio/HapDirectShow/" title="HAP codec for DirectShow">DirectShow</a> or <a href="https://github.com/vidvox/hap-qt-codec/" title="HAP codec for QuickTime">QuickTime</a> for movie playback or encoding it is relatively easy to add native support for the Hap codecs to your own applications. The specification and reference implementation are in <a href="https://github.com/vidvox/hap">the official repository</a>.</p>
 </div>
 
-<section class="big-labels grey" style="padding-bottom: 0;">
+<section class="big-labels grey" id="playing-back" style="padding-bottom: 0;">
     <div>
         <h2>Playing back HAP within your application</h2>
+        <img src="./images/developers/playing-back.png" alt="">
         <p><strong>The route you choose to achieve playback will depend on the platforms you target, and your existing codebase:</strong></p>
         <ul>
             <li>Use any general purpose demuxer and perform the decoding yourself — Using a demuxer such as libavformat from FFmpeg, acquire encoded frames from their container, then use the <a href="https://github.com/vidvox/hap">Hap reference decoder</a> to decode frames to their compressed texture formats.</li>
@@ -40,15 +66,17 @@
     <section style="padding-top: 80px;">
         <p style="margin-left: 4.0351%;margin-right: 4.0351%;"><strong>Hap applies a lightweight secondary compressor to standard compressed texture formats.</strong> Playback involves retreiving frames from the container (demuxing) and decompressing them to their compressed texture data (decoding), which is then presented directly to OpenGL or Direct3D.</p>
         <p style="margin-left: 4.0351%;margin-right: 4.0351%; padding-bottom: 40px;">Hap Q and Hap Q Alpha use a YCoCg colorspace and require a shader to perform colorspace conversion when drawn.</p>
-        <div class="instructions">
-            <p>The following fragment shader performs YCoCg conversion and can be used for drawing Hap Q frames:</p>
-            <script src="https://gist.github.com/jackturner/da2fcdebdc0880a40228aa846bf6b274.js"></script>
-        </div>
+        <div class="instructions-wrapper">
+          <div class="instructions">
+              <p>The following fragment shader performs YCoCg conversion and can be used for drawing Hap Q frames:</p>
+              <script src="https://gist.github.com/jackturner/da2fcdebdc0880a40228aa846bf6b274.js"></script>
+          </div>
 
-        <div class="instructions">
-            <p>The following fragment shader performs YCoCg conversion and combines the colour and alpha planes for Hap Q Alpha frames:</p>
-            <script src="https://gist.github.com/jackturner/0ee5328924524bf0a3fe1200338bf46d.js"></script>
-        </div>
+          <div class="instructions">
+              <p>The following fragment shader performs YCoCg conversion and combines the colour and alpha planes for Hap Q Alpha frames:</p>
+              <script src="https://gist.github.com/jackturner/0ee5328924524bf0a3fe1200338bf46d.js"></script>
+          </div>
+        </section>
     </section>
 </div>
 

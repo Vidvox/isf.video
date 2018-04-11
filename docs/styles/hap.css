@@ -501,26 +501,32 @@ section.integrations {
     float: right;
     margin-right: 0; }
 
-@media (max-width: 768px) {
-  .instructions {
-    width: auto; } }
+#using-hap-instructions .instructions-wrapper {
+  display: flex; }
+  #using-hap-instructions .instructions-wrapper .instructions {
+    flex: 0 0 50%; }
+  @media (max-width: 768px) {
+    #using-hap-instructions .instructions-wrapper {
+      flex-wrap: wrap; }
+      #using-hap-instructions .instructions-wrapper .instructions {
+        flex-basis: 100%; }
+        #using-hap-instructions .instructions-wrapper .instructions .gist {
+          width: 100%; } }
 
 #creative-coding {
   padding: 60px 13.8596491228%; }
   #creative-coding .environments {
     padding: 0;
     list-style: none;
-    font-size: 0; }
+    font-size: 0;
+    justify-content: flex-start; }
     #creative-coding .environments li {
-      display: inline-block;
-      vertical-align: top;
-      width: 20%;
-      padding: 12px 2% 12px 0;
-      font-size: 13px;
-      line-height: 20px; }
-      #creative-coding .environments li img {
-        margin-top: 12px;
-        width: 100%; }
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      margin: 40px 0; }
+      #creative-coding .environments li .description {
+        margin-top: 30px; }
   @media (max-width: 768px) {
     #creative-coding {
       padding-left: 8.4210526316%;
@@ -529,6 +535,21 @@ section.integrations {
         display: block;
         width: auto; } }
 
+#playing-back {
+  position: relative; }
+  #playing-back img {
+    position: absolute;
+    left: 10.5263157895%;
+    width: 29.7368421053%;
+    top: 28%;
+    display: block; }
+  @media (max-width: 768px) {
+    #playing-back img {
+      position: relative;
+      margin: 20px auto;
+      left: unset;
+      width: 50%; } }
+
 .centered-block {
   padding: 60px 13.8596491228%; }
   .centered-block ul {
@@ -536,7 +557,8 @@ section.integrations {
     list-style: none;
     font-size: 0;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    flex-wrap: wrap; }
     .centered-block ul li {
       flex: 0 0 calc((1/3) * 100%);
       padding: 0 12px;
@@ -548,9 +570,6 @@ section.integrations {
         padding-right: 0; }
       .centered-block ul li strong {
         display: block; }
-      .centered-block ul li img {
-        margin-top: 12px;
-        width: 100%; }
       .centered-block ul li .benchmark-logo {
         margin-bottom: 30px;
         width: auto; }
