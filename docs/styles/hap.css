@@ -310,16 +310,19 @@ footer {
   color: #dark-grey;
   font-size: 16px;
   font-weight: 600; }
-  footer ul, footer li {
+  footer li {
     display: inline; }
   footer a {
     display: inline-block; }
   footer ul {
+    display: flex;
     padding: 12px 0; }
   footer .footer-links a {
     margin: 0 8px; }
   footer .social-links a {
-    margin: 0 3px; }
+    margin: 0 3px;
+    width: 36px;
+    height: 36px; }
 
 @media (max-width: 768px) {
   footer {
@@ -357,7 +360,7 @@ section.integrations {
       text-align: center;
       background-color: #F2F1F3; }
       section.integrations ul li img {
-        margin-top: 30px;
+        margin: 10px 0 20px;
         width: calc(100% - 60px); }
       section.integrations ul li span {
         display: block;
@@ -501,6 +504,23 @@ section.integrations {
     float: right;
     margin-right: 0; }
 
+#using-hap-instructions .video-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+  #using-hap-instructions .video-section .media {
+    flex: 0 0 55%; }
+    #using-hap-instructions .video-section .media iframe {
+      width: 100%; }
+  #using-hap-instructions .video-section .instructions {
+    flex: 0 0 35%; }
+  @media (max-width: 768px) {
+    #using-hap-instructions .video-section {
+      flex-wrap: wrap; }
+      #using-hap-instructions .video-section .media,
+      #using-hap-instructions .video-section .instructions {
+        flex-basis: 100%; } }
+
 #using-hap-instructions .instructions-wrapper {
   display: flex; }
   #using-hap-instructions .instructions-wrapper .instructions {
@@ -516,24 +536,31 @@ section.integrations {
 #creative-coding {
   padding: 60px 13.8596491228%; }
   #creative-coding .environments {
-    padding: 0;
+    padding: 20px 0 0;
     list-style: none;
     font-size: 0;
-    justify-content: flex-start; }
-    #creative-coding .environments li {
+    justify-content: space-evenly;
+    display: flex;
+    flex-flow: row wrap; }
+    #creative-coding .environments a {
+      align-items: center;
+      flex: 0 0 calc((1/6) * 100%);
+      font-size: 13px;
+      line-height: 20px;
       display: flex;
       flex-flow: column wrap;
-      justify-content: space-between;
-      margin: 40px 0; }
-      #creative-coding .environments li .description {
-        margin-top: 30px; }
+      justify-content: space-between; }
+      #creative-coding .environments a strong {
+        text-align: center;
+        display: block;
+        margin-top: 10px; }
   @media (max-width: 768px) {
     #creative-coding {
       padding-left: 8.4210526316%;
       padding-right: 8.4210526316%; }
-      #creative-coding .environments li {
-        display: block;
-        width: auto; } }
+      #creative-coding .environments a {
+        flex: 0 0 50%;
+        margin: 20px 0; } }
 
 #playing-back {
   position: relative; }

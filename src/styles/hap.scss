@@ -378,20 +378,23 @@ footer {
     font-size: 16px;
     font-weight: 600;
 
-    ul, li {
+    li {
         display: inline;
     }
     a {
         display: inline-block;
     }
     ul {
-        padding: 12px 0;
+      display: flex;
+      padding: 12px 0;
     }
     .footer-links a {
         margin: 0 8px;
     }
     .social-links a {
         margin: 0 3px;
+        width: 36px;
+        height: 36px;
     }
 }
 @media (max-width: 768px) {
@@ -437,7 +440,7 @@ section.integrations {
             text-align: center;
             background-color: $light-grey;
             img {
-                margin-top: 30px;
+                margin: 10px 0 20px;
                 width: calc(100% - 60px);
             }
             span {
@@ -616,6 +619,31 @@ section.integrations {
         }
     }
 
+    .video-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .media {
+        flex: 0 0 55%;
+
+        iframe {
+          width: 100%;
+        }
+      }
+
+      .instructions {
+        flex: 0 0 35%;
+      }
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        .media,
+        .instructions {
+          flex-basis: 100%;
+        }
+      }
+    }
     .instructions-wrapper {
       display: flex;
 
@@ -640,19 +668,26 @@ section.integrations {
 #creative-coding {
     padding: 60px 13.8596491228%;
     .environments {
-      padding: 0;
+      padding: 20px 0 0;
       list-style: none;
       font-size: 0;
-      justify-content: flex-start;
+      justify-content: space-evenly;
+      display: flex;
+      flex-flow: row wrap;
 
-      li {
+      a {
+        align-items: center;
+        flex: 0 0 calc((1/6) * 100%);
+        font-size: 13px;
+        line-height: 20px;
         display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
-        margin: 40px 0;
 
-        .description {
-          margin-top: 30px;
+        strong {
+          text-align: center;
+          display: block;
+          margin-top: 10px;
         }
       }
     }
@@ -660,10 +695,10 @@ section.integrations {
         padding-left: 8.4210526316%;
         padding-right: 8.4210526316%;
         .environments {
-            li {
-                display: block;
-                width: auto;
-            }
+          a {
+            flex: 0 0 50%;
+            margin: 20px 0;
+          }
         }
     }
 }

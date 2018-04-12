@@ -18,20 +18,26 @@
         <li><strong>Hap Q</strong> has improved image quality, at the expense of larger file sizes.</li>
         <li><strong>Hap Q Alpha</strong> has improved image quality and an Alpha channel, at the expense of larger file sizes.</li>
     </ul>
-    <p>Some encoders allow for encoding with an optional specified 'chunk' size to optimize for ultra high resolution video on a particular hardware system. This setting should typically only be used if you are reaching a CPU performance bottleneck during playback. As a general guide, for HD footage or smaller you can set the chunk size to 1 and for 4k or larger footage the number of chunks should never exceed the number of CPU cores on the computer used for playback.</p>
+    <p>Some encoders allow for encoding with an optional specified 'chunk' size to optimize for ultra high resolution video on a particular hardware system. This setting should typically only be used if you are reaching a CPU performance bottleneck during playback. As a general guide, for HD footage or smaller you can set the chunk size to 1 and for 4k or larger footage the number of chunks should never exceed the number of CPU cores on the computer used for playback. The QuickTime component installs with most software or can be downloaded separately from the <a href="https://github.com/Vidvox/hap-qt-codec/releases" target="_blank">GitHub releases page</a>.</p>
 </div>
 
 <div id="using-hap-instructions">
 
-    <section>
-        <video src="videos/how-to-use/qt7.mp4" autobuffer controls poster="http://via.placeholder.com/1342x720"></video>
-        <div class="instructions">
-            <h2>Transcoding to Hap using the QuickTime export panel</h2>
-            <p>Many applications and batch exporters support QuickTime as an export option which includes a standard option panel for codec selection and parameter adjustment. When the Hap QuickTime component is installed, the Hap, Hap Alpha, Hap Q and Hap Q Alpha options will show up in the "Compression Type" menu. When using Hap and Hap Alpha a slider is provided for adjusting the output quality level.</p>
-        </div>
+    <section class="video-section">
+      <div class="instructions">
+        <h2>Transcoding to Hap using the QuickTime export panel</h2>
+        <p>Many applications and batch exporters support QuickTime as an export option which includes a standard option panel for codec selection and parameter adjustment. When the Hap QuickTime component is installed, the Hap, Hap Alpha, Hap Q and Hap Q Alpha options will show up in the "Compression Type" menu. When using Hap and Hap Alpha a slider is provided for adjusting the output quality level.</p>
+      </div>
+      <div class="media">
+        <iframe src="https://player.vimeo.com/video/264351083?title=0&byline=0&portrait=0" width="640" height="343" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
     </section>
 
-    <section>
+    <section class="video-section">
+        <div class="media">
+          <iframe src="https://player.vimeo.com/video/264351072?title=0&byline=0&portrait=0" width="640" height="376" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <p>The <a href="https://github.com/Vidvox/hap-in-avfoundation/releases" target="_blank">AVF Batch Exporter</a> is a free simple transcoding tool is arranged into three settings panels and can be used to convert multiple files to the specified output codec settings in a single export session.</p>
+        </div>
         <div class="instructions">
             <h2>Batch Exporting on macOS with the AVF Batch Exporter</h2>
             <ol>
@@ -46,10 +52,6 @@
                 </li>
                 <li>File Renaming and Destination Folder: Optional settings for removing, appending or prefixing characters to the file name string and adjusting the output folder.</li>
             </ol>
-        </div>
-        <video src="videos/how-to-use/avf.mp4" autobuffer controls poster="http://via.placeholder.com/1342x720"></video>
-        <div class="under-media">
-            <p>This simple transcoding tool is arranged into three settings panels and can be used to convert multiple files to the specified output codec settings in a single export session.</p>
         </div>
     </section>
 
