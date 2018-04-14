@@ -407,6 +407,9 @@ section.integrations {
     background-color: #4B7CFF; }
     #articles section header h2 {
       padding: 0; }
+    #articles section header a {
+      color: inherit;
+      font-size: inherit; }
 
 #articles section:nth-child(even) {
   background-color: #F2F1F3; }

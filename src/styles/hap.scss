@@ -499,6 +499,10 @@ section.integrations {
             h2{
                 padding: 0;
             }
+			a {
+				color: inherit;
+				font-size: inherit;
+			}
         }
     }
     section:nth-child(even) {
