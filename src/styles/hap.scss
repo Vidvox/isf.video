@@ -434,7 +434,8 @@ section.integrations {
         padding: 0 10.5263158%;
         list-style: none;
         li {
-            width: calc(20% - 13px);
+            width: calc(50% - 13px);
+            max-width: 192px;
             margin-right: 13px;
             margin-bottom: 13px;
             text-align: center;
