@@ -40,7 +40,7 @@
   <nav>
     <ul>
       <li><a href="./showcase.html"  title="">Showcase</a></li>
-      <li><a href="./using-hap.html" class="active"  title="">Using Hap</a></li>
+      <li><a href="./using-hap.html" class="active"  title="">Using HAP</a></li>
       <li><a href="./integrations.html"  title="">Integrations</a></li>
       <li><a href="./benchmarks.html"  title="">Benchmarks</a></li>
       <li><a href="./developers.html"  title="">Developers</a></li>
@@ -55,27 +55,30 @@
 </header>
 
 <div id="using-hap-intro">
-    <p>Movies that are encoded with the Hap codecs are typically exported into standard .mov or .avi containers just like other video files you are used to working with.</p>
-    <h3>Choosing The Right Codec For The Job: Hap, Hap Alpha, Hap Q and Hap Q Alpha</h3>
-    <p>There are four different flavors of Hap to choose from when encoding your clips.</p>
+    <p>Movies that are encoded with the HAP codecs are typically exported into standard .mov or .avi containers just like other video files you are used to working with.</p>
+    <h3>Choosing The Right Codec For The Job: HAP, HAP Alpha, HAP Q and HAP Q Alpha</h3>
+    <p>There are four different flavors of HAP to choose from when encoding your clips.</p>
     <ul class="hap-flavors">
-        <li><strong>Hap</strong> has the lowest data-rate and reasonable image quality.</li>
-        <li><strong>Hap Alpha</strong> has similar image quality to Hap, and supports an Alpha channel.</li>
-        <li><strong>Hap Q</strong> has improved image quality, at the expense of larger file sizes.</li>
-        <li><strong>Hap Q Alpha</strong> has improved image quality and an Alpha channel, at the expense of larger file sizes.</li>
+        <li><strong>HAP</strong> has the lowest data-rate and reasonable image quality.</li>
+        <li><strong>HAP Alpha</strong> has the same image quality as HAP, and supports an Alpha channel.</li>
+        <li><strong>HAP Q</strong> has improved image quality, at the expense of larger file sizes.</li>
+        <li><strong>HAP Q Alpha</strong> has improved image quality and an Alpha channel, at the expense of larger file sizes.</li>
     </ul>
-    <p>Some encoders allow for encoding with an optional specified 'chunk' size to optimize for ultra high resolution video on a particular hardware system. This setting should typically only be used if you are reaching a CPU performance bottleneck during playback. As a general guide, for HD footage or smaller you can set the chunk size to 1 and for 4k or larger footage the number of chunks should never exceed the number of CPU cores on the computer used for playback. The QuickTime component installs with most software or can be downloaded separately from the <a href="https://github.com/Vidvox/hap-qt-codec/releases" target="_blank">GitHub releases page</a>.</p>
+    <p>Some encoders allow for encoding with an optional specified 'chunk' size to optimize for ultra high resolution video on a particular hardware system. This setting should typically only be used if you are reaching a CPU performance bottleneck during playback. As a general guide, for HD footage or smaller you can set the chunk size to 1 and for 4k or larger footage the number of chunks should never exceed the number of CPU cores on the computer used for playback.</p>
+    <p>For encoding to HAP from Adobe AfterEffects, first export to an intermediate format and use one of the below solutions, or try the 3rd party <a href="https://aescripts.com/aftercodecs/" target="_blank">AfterCodecs</a> plugin.</p>
+    <p>Additionally some media servers provide their own method for importing media to convert to HAP and can be used as an alternative where available. Consult the documentation for the systems you are working with for more information.</p>
 </div>
 
 <div id="using-hap-instructions">
 
     <section class="video-section">
       <div class="instructions">
-        <h2>Transcoding to Hap using the QuickTime export panel</h2>
-        <p>Many applications and batch exporters support QuickTime as an export option which includes a standard option panel for codec selection and parameter adjustment. When the Hap QuickTime component is installed, the Hap, Hap Alpha, Hap Q and Hap Q Alpha options will show up in the "Compression Type" menu. When using Hap and Hap Alpha a slider is provided for adjusting the output quality level.</p>
+        <h2>Transcoding to HAP using the QuickTime export panel</h2>
+        <p>Many applications and batch exporters support QuickTime as an export option which includes a standard option panel for codec selection and parameter adjustment. When the HAP QuickTime component is installed, the HAP, HAP Alpha, HAP Q and HAP Q Alpha options will show up in the "Compression Type" menu. When using HAP and HAP Alpha a slider is provided for adjusting the output quality level.</p>
       </div>
       <div class="media">
         <iframe src="https://player.vimeo.com/video/264351083?title=0&byline=0&portrait=0" width="640" height="343" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p>The HAP QuickTime component installs as part of many software packages, or can be downloaded from the <a href="https://github.com/Vidvox/hap-qt-codec/releases" target="_blank">GitHub releases page</a>.</p>
       </div>
     </section>
 
@@ -90,10 +93,10 @@
                 <li>Files To Convert: Drag movie files to this area from the Finder or click the Import button to select media to be transcoded.
                 <li>
                     Output Format: Click the 'Settings' button to open the panel for adjusting the audio and video codec setting options. For audio and video you can specify whether the media should be transcoded or left unchanged.
-                    <p>In addition to specifying a video codec, when using the Hap codecs the following sub options may appear depending on the format.</p>
+                    <p>In addition to specifying a video codec, when using the HAP codecs the following sub options may appear depending on the format.</p>
                     <ul>
                         <li>Quality: When available adjusts the overall tradeoff between image quality and encoding speed.</li>
-                        <li>Chunked Encoding/Decoding: For the Hap codecs a chunking size can be set as an optimization for specific hardware. The default is 1 and should never exceed the number of CPU cores in the playback system.</li>
+                        <li>Chunked Encoding/Decoding: For the HAP codecs a chunking size can be set as an optimization for specific hardware. The default is 1 and should never exceed the number of CPU cores in the playback system.</li>
                     </ul>
                 </li>
                 <li>File Renaming and Destination Folder: Optional settings for removing, appending or prefixing characters to the file name string and adjusting the output folder.</li>
@@ -102,14 +105,14 @@
     </section>
 
     <section>
-        <h2>Encoding to Hap from the command line using FFmpeg</h2>
-        <p style="padding-bottom: 40px;">For users who prefer working with a command line or need to access advanced encoding settings for Hap the popular FFmpeg library can be used to work with Hap movies.</p>
+        <h2>Encoding to HAP from the command line using FFmpeg</h2>
+        <p style="padding-bottom: 40px;">For users who prefer working with a command line or need to access advanced encoding settings for HAP, FFmpeg can be used to work with HAP movies.</p>
         <div class="instructions" style="margin-right: 8.0702%">
             <h3>Installing FFmpeg</h3>
             <p>If this is your first time using FFmpeg you may need to install it on your system, or compile it from source. In either case be sure that Snappy is enabled as part of the binary. If you already have FFmpeg on your system with Snappy enabled, you can skip this step.</p>
-            <p>You can check that your version of FFmpeg can encode Hap using</p>
+            <p>You can check that your version of FFmpeg can encode HAP using</p>
             <pre><code>ffmpeg -encoders | grep hap</code></pre>
-            <p>If the last line of output ends with <code>Vidvox Hap encoder</code> then you can encode Hap. Otherwise install FFmpeg using one of these methods:</p>
+            <p>If the last line of output ends with <code>Vidvox HAP encoder</code> then you can encode HAP. Otherwise install FFmpeg using one of these methods:</p>
             <ul>
                 <li>
                     On macOS you can use <a href="https://brew.sh">Homebrew</a> to install FFmpeg with the following command:
@@ -126,19 +129,19 @@
             <h3>Invoke FFmpeg to convert your files.</h3>
             <ul>
                 <li>
-                    For Hap movies use the following command:
+                    For HAP movies use the following command:
                     <pre><code>ffmpeg -i yourSourceFile.mov -c:v hap outputName.mov</code></pre>
                 </li>
                 <li>
-                    For Hap Alpha movies use the following command:
+                    For HAP Alpha movies use the following command:
                     <pre><code>ffmpeg -i yourSourceFile.mov -c:v hap -format hap_alpha outputName.mov</code></pre>
                 </li>
                 <li>
-                    For Hap Q movies use the following command:
+                    For HAP Q movies use the following command:
                     <pre><code>ffmpeg -i yourSourceFile.mov -c:v hap -format hap_q outputName.mov</code></pre>
                 </li>
             </ul>
-            <p>In addition you can also specify the following optional flags that can be used to create Hap movies that are highly optimized for specific playback hardware. You should only use these in extreme cases if you have reached a specific bottleneck when using the default settings.</p>
+            <p>In addition you can also specify the following optional flags that can be used to create HAP movies that are highly optimized for specific playback hardware. You should only use these in extreme cases if you have reached a specific bottleneck when using the default settings.</p>
             <ul>
                 <li>
                     <code>-chunks N</code> (default is 1; N is a number from 1-64 that does not exceed the number of CPU cores in the playback system)

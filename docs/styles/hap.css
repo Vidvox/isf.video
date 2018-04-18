@@ -354,7 +354,8 @@ section.integrations {
     padding: 0 10.5263158%;
     list-style: none; }
     section.integrations ul li {
-      width: calc(20% - 13px);
+      width: calc(50% - 13px);
+      max-width: 192px;
       margin-right: 13px;
       margin-bottom: 13px;
       text-align: center;
@@ -407,6 +408,9 @@ section.integrations {
     background-color: #4B7CFF; }
     #articles section header h2 {
       padding: 0; }
+    #articles section header a {
+      color: inherit;
+      font-size: inherit; }
 
 #articles section:nth-child(even) {
   background-color: #F2F1F3; }

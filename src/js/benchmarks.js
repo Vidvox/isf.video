@@ -22,7 +22,7 @@ $(function () {
       yAxis: {
         min: 0,
         title: {
-          text: 'Max number of layers at 30fps<br><em>2.7 GHz Intel Core i7 w/ AMD Radeon Pro 460</em>'
+          text: 'Approximate max number of movies at 4k / 30 fps<br><em>2.7 GHz Intel Core i7 w/ AMD Radeon Pro 460</em>'
         }
       },
 

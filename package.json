@@ -3,7 +3,7 @@
   "description": "Website for the HAP video codecs",
   "license": "UNLICENSED",
   "version": "0.0.1",
-  "homepage": "http://hapcodecs.org",
+  "homepage": "http://hap.video",
   "author": {
     "name": "VIDVOX, LLC",
     "email": "support@vidvox.net"
@@ -13,6 +13,7 @@
     "url": "git://github.com/dlublin/hapcodecssite"
   },
   "dependencies": {
+    "ejs": "^2.5.8",
     "gulp": "x",
     "gulp-ejs": "x",
     "gulp-sass": "x"
