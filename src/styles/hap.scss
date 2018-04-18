@@ -402,10 +402,13 @@ footer {
         display: block;
         text-align: center;
     }
-    footer small,
-    footer ul {
+    footer small {
         display: block;
         margin: 16px 10%;
+    }
+    
+    footer ul {
+      justify-content: center;
     }
 }
 
