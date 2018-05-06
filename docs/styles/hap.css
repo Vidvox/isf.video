@@ -334,6 +334,23 @@ footer {
   footer ul {
     justify-content: center; } }
 
+.copy-right-footer {
+  padding: 32px;
+  background: #33272C;
+  color: #FFF;
+  text-align: center;
+  font-weight: bold; }
+  .copy-right-footer .subheading {
+    margin-bottom: 15px; }
+  .copy-right-footer a {
+    color: inherit;
+    font-size: 16px; }
+    .copy-right-footer a img {
+      margin-left: 15px; }
+  @media (max-width: 768px) {
+    .copy-right-footer {
+      border-bottom: 2px solid #FFF; } }
+
 section.integrations {
   margin-top: 52px;
   margin-bottom: 65px; }
