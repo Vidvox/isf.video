@@ -577,14 +577,18 @@ section.integrations {
 #using-hap-intro {
     padding: 60px 10.5263157895%;
     .hap-flavors {
+        margin: 22px -22px;
         padding: 0;
         list-style: none;
         font-size: 0;
+        display: flex;
+        @media (max-width: 768px) {
+            display: block;
+        }
         li {
-            display: inline-block;
-            vertical-align: top;
-            width: 25%;
-            padding: 12px 2% 12px 0;
+            flex-grow: 1;
+            flex-basis: 0;
+            margin: 22px 22px;
             font-size: 13px;
             line-height: 20px;
         }
@@ -601,11 +605,15 @@ section.integrations {
     }
 }
 
+
 .instructions {
     float: left;
     margin-right: 4.0351%;
     margin-left: 4.0351%;
     width: 40%;
+    @media (max-width: 768px) {
+        width: auto;
+    }
 }
 
 #using-hap-instructions {
