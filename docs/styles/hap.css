@@ -610,7 +610,7 @@ section.integrations {
     flex-wrap: wrap; }
     .centered-block ul li {
       flex: 0 0 calc((1/3) * 100%);
-      padding: 0 12px;
+      padding-right: 6.315789474%;
       font-size: 13px;
       line-height: 20px; }
       .centered-block ul li:first-child {
@@ -620,7 +620,8 @@ section.integrations {
       .centered-block ul li strong {
         display: block; }
       .centered-block ul li .benchmark-logo {
-        margin-bottom: 30px;
+        margin-top: 68px;
+        margin-bottom: 44px;
         width: auto; }
       .centered-block ul li p {
         margin-top: 0; }
