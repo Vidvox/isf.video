@@ -366,6 +366,9 @@ section.integrations {
     padding: 24px 2.653508772% 33px 10.614035088%;
     line-height: 1;
     color: white; }
+    section.integrations header a {
+      color: inherit;
+      font-size: inherit; }
   section.integrations ul {
     display: flex;
     flex-wrap: wrap;
