@@ -378,61 +378,49 @@ footer {
     font-size: 16px;
     font-weight: 600;
 
+    small {
+        span {
+            display: block;
+        }
+    }
+
     li {
         display: inline;
     }
     a {
         display: inline-block;
+        color: #000;
+        opacity: 0.783;
     }
     ul {
       display: flex;
       padding: 12px 0;
     }
-    .footer-links a {
-        margin: 0 8px;
-    }
-    .social-links a {
-        margin: 0 3px;
-        width: 36px;
-        height: 36px;
+    .social-links {
+        margin-left: 36px;
+        a {
+            margin: 0 6px;
+            width: 32px;
+            height: 32px;
+        }
     }
 }
 @media (max-width: 768px) {
     footer {
         display: block;
         text-align: center;
-    }
-    footer small {
-        display: block;
-        margin: 16px 10%;
-    }
-    
-    footer ul {
-      justify-content: center;
-    }
-}
-
-.copy-right-footer {
-    padding: 32px;
-    background: #F2F1F3;
-    color: #9394A1;
-    text-align: center;
-    font-weight: bold;
-    .subheading {
-        margin-bottom: 15px;
-    }
-    a {
-        color: inherit;
-        font-size: 16px;
-        img {
-            margin-left: 15px;
+        small {
+            display: block;
+            margin: 16px 10%;
+        }
+        ul {
+          justify-content: center;
+        }
+        .social-links {
+            margin-left: 0;
         }
     }
-    @media (max-width: 768px) {
-        border-bottom: 2px solid #FFF;
-    }
 }
-
 
 // Integations page
 section.integrations {
