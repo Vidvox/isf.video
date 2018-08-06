@@ -259,6 +259,11 @@ html.noscroll body {height: 100%; overflow: hidden}
 @media (max-width: 768px) {
     .homepage-showcase {
         display: block;
+        .image,
+        .wide {
+            padding-left: 8.721804511%;
+            padding-right: 8.721804511%;
+        }
     }
 }
 
@@ -298,7 +303,7 @@ html.noscroll body {height: 100%; overflow: hidden}
     div {
         float: left;
         width: 50%;
-        padding: 56px 112px;
+        padding: 56px 9.824561404%;
         background-color: #DDDDDD;
     }
     div:nth-child(1) { background-color: #D1D1D1; }

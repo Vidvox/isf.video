@@ -202,7 +202,11 @@ html.noscroll body {
 
 @media (max-width: 768px) {
   .homepage-showcase {
-    display: block; } }
+    display: block; }
+    .homepage-showcase .image,
+    .homepage-showcase .wide {
+      padding-left: 8.721804511%;
+      padding-right: 8.721804511%; } }
 
 .two-column {
   padding: 95px 112px 85px;
@@ -233,7 +237,7 @@ html.noscroll body {
 .info-blocks div {
   float: left;
   width: 50%;
-  padding: 56px 112px;
+  padding: 56px 9.824561404%;
   background-color: #DDDDDD; }
 
 .info-blocks div:nth-child(1) {
