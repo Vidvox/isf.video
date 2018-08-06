@@ -554,7 +554,8 @@ section.integrations {
     #using-hap-instructions .instructions-wrapper {
       flex-wrap: wrap; }
       #using-hap-instructions .instructions-wrapper .instructions {
-        flex-basis: 100%; }
+        flex-basis: 100%;
+        width: 100%; }
         #using-hap-instructions .instructions-wrapper .instructions .gist {
           width: 100%; } }
 
