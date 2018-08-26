@@ -430,7 +430,7 @@ footer {
 // Integations page
 section.integrations {
     margin-top: 52px;
-    margin-bottom: 65px;
+    margin-bottom: 120px;
     .glyph {
         display: block;
         margin: 0 auto -35px;
@@ -450,31 +450,64 @@ section.integrations {
 		}
     }
     ul {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 10.5263158%;
+        clear: both;
+        // calc stuff is to compensate for the 10px borders on the li's below
+        padding: 0 calc(10.5263158% - 10px);
         list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        text-align: right;
         li {
-            width: calc(50% - 13px);
-            max-width: 192px;
-            margin-right: 13px;
-            margin-bottom: 13px;
-            text-align: center;
             background-color: $light-grey;
-            img {
-                margin: 10px 0 20px;
-                width: calc(100% - 60px);
-            }
+            border: 10px solid #FFF;
+            padding: 16px;
+            transition: background 150ms ease-out;
             span {
                 display: block;
-                margin: 16px 10px 17px;
+                margin: 0 0 17px;
                 font-size: 12px;
                 line-height: 1.333333333;
                 color: $dark-grey;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            img {
+                width: 100%;
+                transform: scale(0.95);
+                transition: transform 150ms ease-out;
+            }
+            &:hover{
+                background: darken($light-grey, 8%);
+                span {
+                    overflow: visible;
+                    margin-left: -16px;
+                    margin-right: -16px;
+                }
+                img {
+                    transform: scale(1.05);
+                }
             }
         }
     }
+    &:nth-child(even) {
+        header {
+        }
+        ul {
+        }
+    }
+    @media (max-width: 768px) {
+        margin-top: 0;
+        header {
+            width: auto;
+            // !important needed to override the higher selector specificity of the :nth-child() selector used above
+            float: none !important;
+        }
+    }
 }
+
+
 
 .cool-header {
     text-align: center;
@@ -778,9 +811,8 @@ section.integrations {
             }
 
             .benchmark-logo {
-                margin-top: 68px;
+                margin-top: 12px;
                 margin-bottom: 44px;
-                width: auto;
             }
 
             p {
