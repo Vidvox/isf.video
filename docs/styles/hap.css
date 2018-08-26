@@ -389,7 +389,8 @@ section.integrations {
         transform: scale(0.95);
         transition: transform 150ms ease-out; }
       section.integrations ul li:hover {
-        background: #dedbe0; }
+        background: #dedbe0;
+        position: relative; }
         section.integrations ul li:hover span {
           overflow: visible;
           margin-left: -16px;

@@ -480,6 +480,7 @@ section.integrations {
             }
             &:hover{
                 background: darken($light-grey, 8%);
+                position: relative;
                 span {
                     overflow: visible;
                     margin-left: -16px;
