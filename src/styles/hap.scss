@@ -429,8 +429,7 @@ footer {
 
 // Integations page
 section.integrations {
-    margin-top: 52px;
-    margin-bottom: 120px;
+    margin: 94px 0 120px;
     .glyph {
         display: block;
         margin: 0 auto -35px;
@@ -452,42 +451,32 @@ section.integrations {
     ul {
         clear: both;
         // calc stuff is to compensate for the 10px borders on the li's below
-        padding: 0 calc(10.5263158% - 10px);
+        padding: 0 calc(10.5263158% - 12px);
         list-style: none;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         text-align: right;
         li {
             background-color: $light-grey;
-            border: 10px solid #FFF;
-            padding: 16px;
+            border: 12px solid #FFF;
+            padding: 30px 30px 12px;
             transition: background 150ms ease-out;
-            span {
-                display: block;
-                margin: 0 0 17px;
+            text-align: center;
+            line-height: 1.333333333;
+            a {
                 font-size: 12px;
-                line-height: 1.333333333;
                 color: $dark-grey;
-                text-align: center;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            img {
-                width: 100%;
-                transform: scale(0.95);
-                transition: transform 150ms ease-out;
+                img {
+                    margin-bottom: 16px;
+                    width: 100%;
+                    transform: scale(1.0);
+                    transition: transform 150ms ease-out;
+                }
             }
             &:hover{
                 background: darken($light-grey, 8%);
-                position: relative;
-                span {
-                    overflow: visible;
-                    margin-left: -16px;
-                    margin-right: -16px;
-                }
                 img {
-                    transform: scale(1.05);
+                    transform: scale(1.1);
                 }
             }
         }

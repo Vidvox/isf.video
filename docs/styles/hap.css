@@ -345,8 +345,7 @@ footer {
       margin-left: 0; } }
 
 section.integrations {
-  margin-top: 52px;
-  margin-bottom: 120px; }
+  margin: 94px 0 120px; }
   section.integrations .glyph {
     display: block;
     margin: 0 auto -35px;
@@ -364,39 +363,30 @@ section.integrations {
       font-size: inherit; }
   section.integrations ul {
     clear: both;
-    padding: 0 calc(10.5263158% - 10px);
+    padding: 0 calc(10.5263158% - 12px);
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     text-align: right; }
     section.integrations ul li {
       background-color: #F2F1F3;
-      border: 10px solid #FFF;
-      padding: 16px;
-      transition: background 150ms ease-out; }
-      section.integrations ul li span {
-        display: block;
-        margin: 0 0 17px;
+      border: 12px solid #FFF;
+      padding: 30px 30px 12px;
+      transition: background 150ms ease-out;
+      text-align: center;
+      line-height: 1.333333333; }
+      section.integrations ul li a {
         font-size: 12px;
-        line-height: 1.333333333;
-        color: #33272C;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; }
-      section.integrations ul li img {
-        width: 100%;
-        transform: scale(0.95);
-        transition: transform 150ms ease-out; }
+        color: #33272C; }
+        section.integrations ul li a img {
+          margin-bottom: 16px;
+          width: 100%;
+          transform: scale(1);
+          transition: transform 150ms ease-out; }
       section.integrations ul li:hover {
-        background: #dedbe0;
-        position: relative; }
-        section.integrations ul li:hover span {
-          overflow: visible;
-          margin-left: -16px;
-          margin-right: -16px; }
+        background: #dedbe0; }
         section.integrations ul li:hover img {
-          transform: scale(1.05); }
+          transform: scale(1.1); }
   @media (max-width: 768px) {
     section.integrations {
       margin-top: 0; }
