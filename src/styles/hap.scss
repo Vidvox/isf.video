@@ -451,14 +451,14 @@ section.integrations {
     ul {
         clear: both;
         // calc stuff is to compensate for the 10px borders on the li's below
-        padding: 0 calc(10.5263158% - 12px);
+        padding: 0 calc(10.5263158% - 6px);
         list-style: none;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         text-align: right;
         li {
             background-color: $light-grey;
-            border: 12px solid #FFF;
+            border: 6px solid #FFF;
             padding: 30px 30px 12px;
             transition: background 150ms ease-out;
             text-align: center;

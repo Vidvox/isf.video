@@ -363,14 +363,14 @@ section.integrations {
       font-size: inherit; }
   section.integrations ul {
     clear: both;
-    padding: 0 calc(10.5263158% - 12px);
+    padding: 0 calc(10.5263158% - 6px);
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     text-align: right; }
     section.integrations ul li {
       background-color: #F2F1F3;
-      border: 12px solid #FFF;
+      border: 6px solid #FFF;
       padding: 30px 30px 12px;
       transition: background 150ms ease-out;
       text-align: center;
