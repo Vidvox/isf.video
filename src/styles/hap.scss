@@ -40,6 +40,9 @@ h1 {
 
 h2 {
     font-size: 28px;
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
     line-height: 1.285714286;
 }
 
