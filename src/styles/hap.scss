@@ -2,6 +2,42 @@ $blue: #4B7CFF;
 $dark-grey: #33272C;
 $light-grey: #F2F1F3;
 
+@mixin grid-list($v_padding: 0, $h_padding: 0px, $grid_gutter: 12px, $max_cell_size: 200px) {
+    clear: both;
+    margin-left: $grid_gutter / -2;
+    margin-right: $grid_gutter / -2;
+    // calc stuff is to compensate for the 10px borders on the li's below
+    padding: $v_padding $h_padding;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($max_cell_size, 1fr));
+    text-align: right;
+    li {
+        background-color: $light-grey;
+        border: $grid_gutter / 2 solid #FFF;
+        padding: 30px 30px 12px;
+        transition: background 150ms ease-out;
+        text-align: center;
+        line-height: 1.333333333;
+        a {
+            font-size: 12px;
+            color: $dark-grey;
+            img {
+                margin-bottom: 16px;
+                width: 100%;
+                transform: scale(1.0);
+                transition: transform 150ms ease-out;
+            }
+        }
+        &:hover{
+            background: darken($light-grey, 8%);
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
 * {
     margin:             0;
     padding:            0;
@@ -452,44 +488,9 @@ section.integrations {
 		}
     }
     ul {
-        clear: both;
-        // calc stuff is to compensate for the 10px borders on the li's below
-        padding: 0 calc(10.5263158% - 6px);
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        text-align: right;
-        li {
-            background-color: $light-grey;
-            border: 6px solid #FFF;
-            padding: 30px 30px 12px;
-            transition: background 150ms ease-out;
-            text-align: center;
-            line-height: 1.333333333;
-            a {
-                font-size: 12px;
-                color: $dark-grey;
-                img {
-                    margin-bottom: 16px;
-                    width: 100%;
-                    transform: scale(1.0);
-                    transition: transform 150ms ease-out;
-                }
-            }
-            &:hover{
-                background: darken($light-grey, 8%);
-                img {
-                    transform: scale(1.1);
-                }
-            }
-        }
+        @include grid-list(0, 10.5263157895%);
     }
-    &:nth-child(even) {
-        header {
-        }
-        ul {
-        }
-    }
+
     @media (max-width: 768px) {
         margin-top: 0;
         header {
@@ -727,41 +728,9 @@ section.integrations {
 }
 
 #creative-coding {
-    padding: 60px 13.8596491228%;
-    .environments {
-      padding: 20px 0 0;
-      list-style: none;
-      font-size: 0;
-      justify-content: space-evenly;
-      display: flex;
-      flex-flow: row wrap;
-
-      a {
-        margin: 0 0 36px;
-        align-items: center;
-        flex: 0 0 calc((1/4) * 100%);
-        font-size: 13px;
-        line-height: 20px;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-between;
-
-        strong {
-          text-align: center;
-          display: block;
-          margin-top: 10px;
-        }
-      }
-    }
-    @media (max-width: 768px) {
-        padding-left: 8.4210526316%;
-        padding-right: 8.4210526316%;
-        .environments {
-          a {
-            flex: 0 0 50%;
-            margin: 20px 0;
-          }
-        }
+    // padding: 60px 13.8596491228%;
+    ul {
+        @include grid-list($v_padding: 20px, $max_cell_size: 180px);
     }
 }
 
@@ -787,7 +756,15 @@ section.integrations {
 }
 
 .centered-block {
-    padding: 60px 13.8596491228%;
+    padding: 60px 10.5263158% * 2;
+    @media (max-width: 768px) {
+        padding-left: 8.4210526316%;
+        padding-right: 8.4210526316%;
+    }
+
+}
+
+#codec-info {
     ul {
         padding: 0;
         list-style: none;
@@ -814,8 +791,6 @@ section.integrations {
         }
     }
     @media (max-width: 768px) {
-        padding-left: 8.4210526316%;
-        padding-right: 8.4210526316%;
         ul {
             display: block;
             li {
@@ -826,7 +801,6 @@ section.integrations {
             }
         }
     }
-
 }
 
 .cta-bar {
