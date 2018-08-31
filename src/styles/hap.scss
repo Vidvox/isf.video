@@ -87,6 +87,15 @@ h3 {
     line-height: 27px;
 }
 
+h4 {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    abbr {
+        text-transform: none;
+    }
+}
+
 ul, ol {
     list-style: square;
     padding: 1em 0 1em 1.5em;
@@ -735,24 +744,23 @@ section.integrations {
 }
 
 #playing-back {
-  position: relative;
-
-  img {
-    position: absolute;
-    left: 10.5263157895%;
-    width: 29.7368421053%;
-    top: 28%;
-    display: block;
-  }
-
-  @media (max-width: 768px) {
-    img {
-      position: relative;
-      margin: 20px auto;
-      left: unset;
-      width: 50%;
+    position: relative;
+    h2, p {
+        margin-bottom: 0.5em;
     }
-  }
+    img {
+        position: absolute;
+        left: 17%;
+        width: 20%;
+        top: 32%;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        img {
+            display: none;
+        }
+    }
 }
 
 .centered-block {

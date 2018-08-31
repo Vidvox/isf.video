@@ -39,6 +39,13 @@ h3 {
   font-size: 17px;
   line-height: 27px; }
 
+h4 {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase; }
+  h4 abbr {
+    text-transform: none; }
+
 ul, ol {
   list-style: square;
   padding: 1em 0 1em 1.5em; }
@@ -605,18 +612,17 @@ section.integrations {
 
 #playing-back {
   position: relative; }
+  #playing-back h2, #playing-back p {
+    margin-bottom: 0.5em; }
   #playing-back img {
     position: absolute;
-    left: 10.5263157895%;
-    width: 29.7368421053%;
-    top: 28%;
+    left: 17%;
+    width: 20%;
+    top: 32%;
     display: block; }
   @media (max-width: 768px) {
     #playing-back img {
-      position: relative;
-      margin: 20px auto;
-      left: unset;
-      width: 50%; } }
+      display: none; } }
 
 .centered-block {
   padding: 60px 21.05263%; }

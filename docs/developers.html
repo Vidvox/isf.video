@@ -81,7 +81,7 @@
 <section class="big-labels grey" id="playing-back" style="padding-bottom: 0;">
     <div>
         <h2>Playing HAP media files</h2>
-        <img src="./images/developers/playing-back.png" alt="">
+        <img src="./images/developers/playing-back.svg" alt="">
         <p><strong>The route you choose to achieve playback will depend on the platforms you target, and your existing codebase:</strong></p>
         <ul>
             <li>Use any general purpose demuxer and perform the decoding yourself — Using a demuxer such as libavformat from FFmpeg, acquire encoded frames from their container, then use the <a href="https://github.com/vidvox/hap">HAP reference decoder</a> to decode frames to their compressed texture formats.</li>
@@ -93,7 +93,7 @@
 
 <div id="using-hap-instructions">
     <section style="padding-top: 80px;">
-        <p style="margin-left: 4.0351%;margin-right: 4.0351%; padding-bottom: 40px;"><strong>HAP Q and HAP Q Alpha use a YCoCg colorspace and require a shader to perform colorspace conversion when drawn.</strong></p>
+        <h4>HAP Q and HAP Q Alpha use a <abbr title="Luma, Chrominance orange, Chrominance green">YCoCg</abbr> colorspace and require a shader to perform colorspace conversion when drawn.</h4>
         <div class="instructions-wrapper">
           <div class="instructions">
               <p>The following fragment shader performs YCoCg conversion and can be used for drawing HAP Q frames:</p>
