@@ -378,15 +378,15 @@ section.integrations {
     padding: 0 10.52632%;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    text-align: right; }
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto)); }
     section.integrations ul li {
       background-color: #F2F1F3;
       border: 6px solid #FFF;
       padding: 30px 30px 12px;
       transition: background 150ms ease-out;
       text-align: center;
-      line-height: 1.333333333; }
+      line-height: 1.333333333;
+      font-size: 12px; }
       section.integrations ul li a {
         font-size: 12px;
         color: #33272C; }
@@ -490,27 +490,37 @@ section.integrations {
 #using-hap-intro {
   padding: 60px 10.5263157895%; }
   #using-hap-intro .hap-flavors {
-    margin: 22px -22px;
-    padding: 0;
+    clear: both;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 20px 0px;
     list-style: none;
-    font-size: 0;
-    display: flex; }
-    @media (max-width: 768px) {
-      #using-hap-intro .hap-flavors {
-        display: block; } }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, auto));
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
     #using-hap-intro .hap-flavors li {
-      flex-grow: 1;
-      flex-basis: 0;
-      margin: 22px 22px;
-      font-size: 13px;
-      line-height: 20px; }
-  @media (max-width: 768px) {
-    #using-hap-intro {
-      padding-left: 8.4210526316%;
-      padding-right: 8.4210526316%; }
-      #using-hap-intro .hap-flavors li {
-        display: block;
-        width: auto; } }
+      background-color: #F2F1F3;
+      border: 12px solid #FFF;
+      padding: 48px 48px 42px;
+      transition: background 150ms ease-out;
+      text-align: left;
+      line-height: 1.333333333;
+      font-size: 12px; }
+      #using-hap-intro .hap-flavors li a {
+        font-size: 12px;
+        color: #33272C; }
+        #using-hap-intro .hap-flavors li a img {
+          margin-bottom: 16px;
+          width: 100%;
+          transform: scale(1);
+          transition: transform 150ms ease-out; }
+      #using-hap-intro .hap-flavors li:hover {
+        background: #dedbe0; }
+        #using-hap-intro .hap-flavors li:hover img {
+          transform: scale(1.1); }
+    @media (max-width: 1024px) {
+      #using-hap-intro .hap-flavors {
+        grid-template-columns: 1fr; } }
 
 .instructions {
   float: left;
@@ -588,15 +598,15 @@ section.integrations {
   padding: 20px 0px;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  text-align: right; }
+  grid-template-columns: repeat(auto-fill, minmax(180px, auto)); }
   #creative-coding ul li {
     background-color: #F2F1F3;
     border: 6px solid #FFF;
     padding: 30px 30px 12px;
     transition: background 150ms ease-out;
     text-align: center;
-    line-height: 1.333333333; }
+    line-height: 1.333333333;
+    font-size: 12px; }
     #creative-coding ul li a {
       font-size: 12px;
       color: #33272C; }
