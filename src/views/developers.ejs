@@ -8,13 +8,10 @@
     <span class="subheading">Supporting HAP in your applications</span>
 </header>
 
-<div id="creative-coding" class="centered-block" style="padding-bottom: 0;">
+<div id="creative-coding" class="centered-block">
     <h2>Information for Developers</h2>
     <p>HAP works by applying a lightweight secondary compressor to standard compressed texture formats. Playback involves retreiving frames from the container (demuxing) and decompressing them to their compressed texture data (decoding), which is then presented directly to OpenGL or Direct3D.</p>
     <p>Below you can find information to help add support for HAP into your own software. In many cases you can simply use an existing framework or library to enable both playback and encoding. For more information you can also visit the HAP project page on <a href="https://github.com/Vidvox/hap" target="_blank">GitHub</a>.</p>
-</div>
-
-<div id="creative-coding" class="centered-block">
     <h3>Creative Coding Environments</h3>
     <p>The following addons enable HAP support in popular creative coding environments:</p>
 
@@ -32,7 +29,7 @@
     <p>If you are already using <a href="http://github.com/Vidvox/hap-in-avfoundation" title="GitHub repository for the VIDVOX AVFoundation framework">AVFoundation</a>, <a href="https://ffmpeg.org/" title="FFmpeg website">FFmpeg</a>, LibAV, <a href="http://www.renderheads.com/portfolio/HapDirectShow/" title="HAP codec for DirectShow">DirectShow</a> or <a href="https://github.com/vidvox/hap-qt-codec/" title="HAP codec for QuickTime">QuickTime</a> for movie playback or encoding it is relatively easy to add native support for the HAP video codecs to your own applications. Additional information can be found in the sections below.</p>
 </div>
 
-<section class="big-labels grey" id="playing-back" style="padding-bottom: 0;">
+<section class="big-labels grey" id="playing-back">
     <div>
         <h2>Playing HAP media files</h2>
         <img src="./images/developers/playing-back.svg" alt="">
@@ -46,7 +43,7 @@
 </section>
 
 <div id="using-hap-instructions">
-    <section style="padding-top: 80px;">
+    <section>
         <h4>HAP Q and HAP Q Alpha use a <abbr title="Luma, Chrominance orange, Chrominance green">YCoCg</abbr> colorspace and require a shader to perform colorspace conversion when drawn.</h4>
         <div class="instructions-wrapper">
           <div class="instructions">

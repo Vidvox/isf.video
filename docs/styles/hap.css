@@ -39,6 +39,10 @@ h3 {
   font-size: 17px;
   line-height: 27px; }
 
+p + h3,
+p + h4 {
+  margin: 2em 0 1em; }
+
 h4 {
   font-size: 13px;
   font-weight: bold;
@@ -621,7 +625,8 @@ section.integrations {
         transform: scale(1.1); }
 
 #playing-back {
-  position: relative; }
+  position: relative;
+  padding-bottom: 0; }
   #playing-back h2, #playing-back p {
     margin-bottom: 0.5em; }
   #playing-back img {
