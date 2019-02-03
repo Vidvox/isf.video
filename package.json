@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "ejs": "^2.5.8",
-    "gulp": "x",
-    "gulp-ejs": "x",
-    "gulp-sass": "x"
+    "gulp": "3.9.1",
+    "gulp-ejs": "3.0.1",
+    "gulp-sass": "3.1.0"
   }
 }
