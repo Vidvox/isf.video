@@ -530,7 +530,8 @@ section.integrations {
   float: left;
   margin-right: 4.0351%;
   margin-left: 4.0351%;
-  width: 40%; }
+  width: 40%;
+  overflow: hidden; }
   @media (max-width: 768px) {
     .instructions {
       width: auto; } }
@@ -602,7 +603,7 @@ section.integrations {
   padding: 20px 0px;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, auto)); }
+  grid-template-columns: repeat(auto-fill, minmax(210px, auto)); }
   #creative-coding ul li {
     background-color: #F2F1F3;
     border: 6px solid #FFF;

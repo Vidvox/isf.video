@@ -629,6 +629,7 @@ section.integrations {
     margin-right: 4.0351%;
     margin-left: 4.0351%;
     width: 40%;
+    overflow: hidden;
     @media (max-width: 768px) {
         width: auto;
     }
@@ -724,7 +725,7 @@ section.integrations {
 #creative-coding {
     // padding: 60px 13.8596491228%;
     ul {
-        @include grid-list($v_padding: 20px, $max_cell_size: 180px);
+        @include grid-list($v_padding: 20px, $max_cell_size: 210px);
     }
 }
 
