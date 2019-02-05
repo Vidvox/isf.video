@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 110 110" style="enable-background:new 0 0 110 110;" xml:space="preserve">
-<title>openFrameworks Logo</title>
-<g id="Page-1">
-	<path id="Oval-1" d="M58,55c0-16-13-29-29-29S0,39,0,55s13,29,29,29S58,71,58,55z"/>
-	<rect id="Rectangle-1" x="59" y="26" width="25" height="58"/>
-	<rect id="Rectangle-2" x="85" y="52" width="15" height="15"/>
-	<path id="Path-2" d="M85,26h25L85,51V26z"/>
-</g>
-</svg>
+<svg enable-background="new 0 0 110 110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg"><path d="m58 55c0-16-13-29-29-29s-29 13-29 29 13 29 29 29 29-13 29-29z"/><path d="m59 26h25v58h-25z"/><path d="m85 52h15v15h-15z"/><path d="m85 26h25l-25 25z"/></svg>
