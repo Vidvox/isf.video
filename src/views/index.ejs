@@ -2,40 +2,37 @@
 
 <%- include('partials/doc_top'); %>
 <%- include('partials/nav'); %>
-<%- include('partials/showcase'); %>
 
 <section class="two-column">
   <div>
     <img src="images/home-4.jpg" alt="" width="266" height="266" />
   </div>
   <div class="text">
-    <h2>HAP is for artists, digital signage, event production and creative coders.</h2>
-    <p>Regardless of the field, artists need to use their movie files in lots of different tools during the creative process. Nobody wants to be locked into a single platform and having to transcode to lots of different proprietary formats to get the best performance is often confusing and time consuming. HAP addresses this problem by providing a free open source baseline standard that is designed to provide a single efficient hardware accelerated playback video format that can be used with most popular media servers, VJ software and creative coding environments.</p>
+    <h2>ISF is for visual artists, digital signage, event production and creative coders.</h2>
+    <p>Regardless of the specific field, modern visual artists need to use interactive generators, FX and transition in lots of different tools during the creative process. Nobody wants to be locked into a single platform and having to rewrite code to lots of different proprietary formats is often confusing and time consuming. ISF addresses this problem by providing a free open source baseline standard for working with GLSL that is designed to provide a single efficient hardware accelerated playback video format that can be used with popular media servers, VJ software, non-linear editors and creative coding environments.</p>
   </div>
 </section>
 
 <section class="info-blocks">
 
   <div>
-    <h2><a href="./showcase.html">A pro video format for creative workflows</a></h2>
-    <p>The HAP codecs are designed to fit the needs of a variety of real-time video workflows where ultra high resolution video is needed such as live event production, set design, 360 video for gaming, projection mapping and creative coding.</p>
-    <p>Along with the ability to work at extremely high resolutions the HAP codecs also include pro video features like alpha channel support and high quality modes.</p>
+    <h2><a href="./showcase.html">A pro video shader for creative workflows</a></h2>
+    <p>ISF is designed to make it easy to write GLSL code and then use it seamlessly within host applications through published input parameters. The specification includes features multiple render passes and persistent buffers for creating complex compositions.</p>
   </div>
 
   <div>
-    <h2><a href="./benchmarks.html">Fast as F***</a></h2>
-    <p>HAP is a set of video codecs for macOS, Windows and Linux that performs decompression using a computer's graphics hardware, substantially reducing the CPU usage necessary to play video — this is useful in situations where CPU power is a limiting factor, such as when working with multiple high resolution videos in real-time.</p>
-    <p>Our benchmarks page shows how HAP compares to other commonly used options and discusses the tradeoffs involved for each format.</p>
+    <h2>Fast as F***</h2>
+    <p>Shaders run on a computer's graphics hardware, substantially reducing the CPU usage necessary to render and process video streams — this is useful in situations where CPU power is a limiting factor, such as when working with multiple high resolution videos in real-time.</p>
   </div>
 
   <div>
-    <h2><a href="./using-hap.html">Works with existing workflows</a></h2>
-    <p>Movies that are encoded with the HAP codecs are typically exported into standard .mov or .avi containers just like other video you are used to working with and will playback just like any other file in supported applications. Additionally HAP can be exported to by using AVFoundation, QuickTime, FFmpeg and other standard exporting software making it easy to fit into existing encoding workflows.</p>
+    <h2><a href="./using-isf.html">Works with existing workflows</a></h2>
+    <p>GLSL is one of the main standards for image processing on the GPU which can run on most desktop systems (Mac, Win, Linux), mobile (iOS, Android) devices and the web. Code from shaders in other similar formats can often be adapted to ISF with relatively little effort.</p>
   </div>
 
   <div>
     <h2><a href="./integrations.html">Widely Supported</a></h2>
-    <p>Playback of movies encoded in HAP is already supported natively or by 3rd party plugins in over two dozen of the most popular media servers, real-time video applications, and creative coding environments, making it easy to switch tools without transcoding your media files.</p>
+    <p>Usage of ISF is already supported natively or by 3rd party plugins in nearly a dozen of the most popular media servers, real-time video applications, and creative coding environments, making it easy to switch tools without having to rewrite your shaders.</p>
   </div>
 
 </section>
@@ -46,15 +43,15 @@
 <section class="big-labels">
 
   <div>
-    <h2>The HAP video codecs are open-source, licensed under a Free BSD License.</h2>
+    <h2>The ISF specification, codebase and shaders are open-source, licensed under the MIT License.</h2>
     <p><strong>Everyone can use it for commercial or noncommercial applications completely free of charge.</strong></p>
-    <p>This project was originally written by <a href="http://kriss.cx/tom/" title="">Tom Butterworth</a> who continues to maintain the bulk of the development and was commissioned by <a href="http://vidvox.net" target="_blank">VIDVOX</a> in 2012. Additional code and financial support has been provided by other developers and partners from around the world since its initial public release in 2013.</p>
+    <p>This project was originally written by, and continues to be maintained by <a href="http://vidvox.net" target="_blank">VIDVOX</a> with the help of other developers and collaborators.</p>
     <p>We have found that open source code and open standards are especially important for creative communities such as ours where interoperability between tools is often crucial for artists to achieve their visions. We encourage other developers of creative technology and artists themselves to share their low-level knowledge and support the adoption of open standards in their work.</p>
   </div>
 
   <div>
-    <h2>How do I add support for HAP to my software?</h2>
-    <p>If you are already using AVFoundation, FFmpeg, LibAV, DirectShow or QuickTime for movie playback or encoding it is relatively easy to add native support for the HAP codecs to your own applications. Check out <a href="./developers.html">our developers page</a> for instructions, sample code and other useful links to get started.</p>
+    <h2>How do I add support for ISF to my software?</h2>
+    <p>If you are already using OpenGL or WebGL for video processing it is relatively easy to add native support for the ISF shader spec to your own applications. Check out <a href="./developers.html">our developers page</a> for instructions, sample code and other useful links to get started.</p>
   </div>
 
 </section>
