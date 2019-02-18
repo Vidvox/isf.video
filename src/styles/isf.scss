@@ -1,4 +1,4 @@
-$blue: #4B7CFF;
+$accent: #02ff3f;
 $dark-grey: #33272C;
 $light-grey: #F2F1F3;
 
@@ -50,7 +50,7 @@ img {
 
 html {
     box-sizing:         border-box;
-    background-color:   #F5F5F5;
+    background-color:   #0A0A0A;
 }
 
 *, *:before, *:after {
@@ -58,15 +58,20 @@ html {
 }
 
 body {
-    font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, arial, sans-serif;
+    // font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, arial, sans-serif;
+    font-family: Rubik,sans-serif;
     font-size: 17px;
     line-height: 1.5882352941;
     max-width: 1400px;
     margin: auto;
     -webkit-font-smoothing: antialiased;
-    color: #353535;
-    box-shadow: 0 0 20px #DDD;
-    background: #FFF;
+    color: #b9b9b9;
+    box-shadow: 0 0 20px #222;
+    background: #333;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #FFF;
 }
 
 h1 {
@@ -121,7 +126,7 @@ p {
 
 a {
     text-decoration: inherit;
-    color: #4B7CFF;
+    color: $accent;
 }
 
 section {
@@ -144,7 +149,7 @@ html.noscroll body {height: 100%; overflow: hidden}
 
 #nav {
     position: relative;
-    background-color: #33272C;
+    // background-color: #33272C;
     transition: all 400ms ease;
     #logo img {
         transition: all 400ms ease;
@@ -157,19 +162,19 @@ html.noscroll body {height: 100%; overflow: hidden}
         a {
             color: #FFF;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 500;
             padding: 10px;
             &.active {
                 text-decoration: underline;
             }
             &:hover {
-                color: $blue;
+                color: $accent;
             }
         }
     }
     @media (min-width: 900px) {
         height: 110px;
-        padding: 24px 10.5263157895%;
+        padding: 24px 112px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -178,7 +183,7 @@ html.noscroll body {height: 100%; overflow: hidden}
         }
         nav {
             position: absolute;
-            right: 10.5263157895%;
+            right: 112px;
             top: 66px;
             padding-left: calc(128px + 10.5263157895%;);
             ul {
@@ -294,7 +299,7 @@ html.noscroll body {height: 100%; overflow: hidden}
         grid-row-end: span 2;
     }
     .blue {
-        background-color: $blue;
+        background-color: $accent;
         color: #FFF;
     }
     .white {
@@ -359,12 +364,12 @@ html.noscroll body {height: 100%; overflow: hidden}
         padding: 56px 9.824561404%;
         background-color: #DDDDDD;
     }
-    div:nth-child(1) { background-color: #D1D1D1; }
-    div:nth-child(2) { background-color: #DDDDDD; }
-    div:nth-child(3) { background-color: #DDDDDD; }
-    div:nth-child(4) { background-color: #E7E7E7; }
-    div:nth-child(5) { background-color: #EBEBEB; }
-    div:nth-child(6) { background-color: #D1D1D1; }
+    div:nth-child(1) { background-color: #252525; }
+    div:nth-child(2) { background-color: #1A1A1A; }
+    div:nth-child(3) { background-color: #222222; }
+    div:nth-child(4) { background-color: #1A1A1A; }
+    div:nth-child(5) { background-color: #141414; }
+    div:nth-child(6) { background-color: #2E2E2E; }
 }
 @media (max-width: 768px) {
   .info-blocks div {
@@ -492,7 +497,7 @@ section.integrations {
     header {
         position: relative;
         margin-bottom: 47px;
-        background: $blue;
+        background: $accent;
         width: 50%;
         padding: 24px 2.653508772% 33px 10.614035088%;
         line-height: 1;
@@ -559,7 +564,7 @@ section.integrations {
             padding-left: 38px;
             width: 50%;
             color: white;
-            background-color: $blue;
+            background-color: $accent;
             h2{
                 padding: 0;
             }
@@ -801,7 +806,7 @@ section.integrations {
 
 .cta-bar {
     padding: 32px;
-    background: $blue;
+    background: $accent;
     color: #FFF;
     text-align: center;
     font-weight: bold;
