@@ -1,6 +1,6 @@
 $accent: #02ff3f;
-$dark-grey: #33272C;
-$light-grey: #F2F1F3;
+$dark-grey: #333;
+$darker-grey: #222;
 
 @mixin grid-list($v_padding: 0, $h_padding: 0px, $gutter_size: 12px, $max_cell_size: 200px, $cell_padding: 30px 30px 12px, $text-align: center) {
     clear: both;
@@ -12,7 +12,7 @@ $light-grey: #F2F1F3;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax($max_cell_size, auto));
     li {
-        background-color: $light-grey;
+        background-color: $darker-grey;
         border: $gutter_size / 2 solid #FFF;
         padding: $cell_padding;
         transition: background 150ms ease-out;
@@ -30,7 +30,7 @@ $light-grey: #F2F1F3;
             }
         }
         &:hover{
-            background: darken($light-grey, 8%);
+            background: darken($darker-grey, 8%);
             img {
                 transform: scale(1.1);
             }
@@ -71,7 +71,8 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    color: #FFF;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
 }
 
 h1 {
@@ -99,7 +100,7 @@ p + h4 {
 
 h4 {
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: uppercase;
     abbr {
         text-transform: none;
@@ -116,7 +117,7 @@ ul, ol {
 
 .subheading {
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 12px;
 }
 
@@ -134,14 +135,14 @@ section {
 }
 
 .grey {
-    background-color: $light-grey;
+    background-color: $darker-grey;
 }
 
 .divider-top {
-    border-top: 2px solid $light-grey;
+    border-top: 2px solid $darker-grey;
 }
 .divider-bottom {
-    border-bottom: 2px solid $light-grey;
+    border-bottom: 2px solid $darker-grey;
 }
 
 html.noscroll,
@@ -306,7 +307,7 @@ html.noscroll body {height: 100%; overflow: hidden}
         background-color: #FFF;
     }
     a {
-        font-weight: bold;
+        font-weight: 500;
         display: inline-block;
     }
     a.white,
@@ -432,14 +433,14 @@ section.image {
 footer {
     clear: both;
     padding: 70px 10.5263157895%;
-    background-color: #F2F1F3;
+    border-top: 1px solid $darker-grey;
     color: #9394A1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #dark-grey;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
 
     small {
         span {
@@ -575,7 +576,7 @@ section.integrations {
         }
     }
     section:nth-child(even) {
-        background-color: $light-grey;
+        background-color: $darker-grey;
         img {
             float: right;
             margin-left: 0;
@@ -644,7 +645,7 @@ section.integrations {
 #using-hap-instructions {
     section {
         padding: 80px 10.5263157895% 60px;
-        background-color: #F2F1F3;
+        background-color: $darker-grey;
         &:after {
             content: "";
             display: table;
@@ -670,7 +671,7 @@ section.integrations {
         }
     }
     section:nth-child(even) {
-        background-color: white;
+        background-color: transparent;
         img, video, .under-media {
             float: left;
             clear: left;
