@@ -1,4 +1,5 @@
-$accent: #02ff3f;
+$link-color: #02ff3f;
+$accent: #a846a0;
 $dark-grey: #333;
 $darker-grey: #222;
 
@@ -127,7 +128,7 @@ p {
 
 a {
     text-decoration: inherit;
-    color: $accent;
+    color: $link-color;
 }
 
 section {
@@ -169,7 +170,7 @@ html.noscroll body {height: 100%; overflow: hidden}
                 text-decoration: underline;
             }
             &:hover {
-                color: $accent;
+                color: $link-color;
             }
         }
     }
