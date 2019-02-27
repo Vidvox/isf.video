@@ -10,73 +10,34 @@
 
 <div id="creative-coding" class="centered-block">
     <h2>Information for Developers</h2>
-    <p>HAP works by applying a lightweight secondary compressor to standard compressed texture formats. Playback involves retreiving frames from the container (demuxing) and decompressing them to their compressed texture data (decoding), which is then presented directly to OpenGL or Direct3D.</p>
-    <p>Below you can find information to help add support for HAP into your own software. In many cases you can simply use an existing framework or library to enable both playback and encoding. For more information you can also visit the HAP project page on <a href="https://github.com/Vidvox/hap" target="_blank">GitHub</a>.</p>
-    <h3>Creative Coding Environments</h3>
-    <p>The following addons enable HAP support in popular creative coding environments:</p>
+    <p>Interactive Shader Format, or ISF for short, is an open specification for creating GLSL shaders to use as generators, transitions and effects in host applications. The goal of this format is to provide a simple and minimal interface for authors to write code once in a generic and modular fashion.    </p>
+    <p>Developers who are interested in writing their own shaders can read more about the process in on Using ISF page and in the ISF documentation pages.</p>
+    <p>Developers who are interested in adding support for ISF shaders in their host applications can find more information in the sections below, as well as on the ISF GitHub project and ISF Specification pages.</p>
 
+    <h3>Official Frameworks</h3>
     <ul>
-      <li><a href="https://github.com/rsodre/Cinder-Hap" title="" target="_blank"><img src="images/integrations/apps/cinder.png" alt="Cinder via Cinder-Hap logo" /> Cinder (QuickTime)</a></li>
-      <li><a href="https://github.com/lightact/HAP-Cinder" title="" target="_blank"><img src="images/integrations/apps/cinder.png" alt="Cinder via HAP-Cinder logo" /> Cinder (Direct Show)</a></li>
-      <li><a href="https://www.assetstore.unity3d.com/en/#!/content/56355" title="" target="_blank"><img src="images/integrations/apps/unity.svg" alt="Unity via AV PRO QUICKTIME logo" /> Unity (AV Pro)</a></li>
-      <li><a href="https://www.assetstore.unity3d.com/en/#!/content/78908" title="" target="_blank"><img src="images/integrations/apps/unity.svg" alt="Unity via AV PRO QUICKTIME logo" /> Unity (Demolition Media)</a></li>
-      <li><a href="https://cycling74.com/forums/announcing-hap-video-engine/" title="" target="_blank"><img src="images/integrations/apps/max.png" alt="Max via Hap Video Engine or jit.gl.hap logo" /> Max</a></li>
-      <li><a href="https://github.com/bangnoise/ofxHapPlayer" title="" target="_blank"><img src="images/integrations/apps/openframeworks.svg" alt="OpenFrameworks via ofxHapPlayer logo" /> OpenFrameworks via ofxHapPlayer</a></li>
-      <li><a href="https://github.com/secondstory/ofxDSHapVideoPlayer" title="" target="_blank"><img src="images/integrations/apps/openframeworks.svg" alt="OpenFrameworks via ofxDSHapVideoPlayer logo" /> OpenFrameworks via ofxDSHapVideoPlayer</a></li>
-      <li><a href="https://github.com/lov/CoGeHapPlayer" title="" target="_blank"><img src="images/integrations/apps/quartz-composer.png" alt="Quartz Composer via CoGeHapPlayer logo" /> Quartz Composer</a></li>
+        <li><a href="https://github.com/mrRay/vvopensource" title="" target="_blank"><img src="" alt=" logo" /> Objective-C (Mac, iOS)</a></li>
+        <li><a href="https://github.com/mrRay/vvisf-gl" title="" target="_blank"><img src="" alt=" logo" /> C++ (Mac, Win, Linux, iOS)</a></li>
+        <li><a href="https://github.com/msfeldstein/interactive-shader-format-js" title="" target="_blank"><img src="" alt=" logo" /> JavaScript (Web)</a></li>
     </ul>
-    <h3>Custom Software</h3>
-    <p>If you are already using <a href="http://github.com/Vidvox/hap-in-avfoundation" title="GitHub repository for the VIDVOX AVFoundation framework">AVFoundation</a>, <a href="https://ffmpeg.org/" title="FFmpeg website">FFmpeg</a>, LibAV, <a href="http://www.renderheads.com/portfolio/HapDirectShow/" title="HAP codec for DirectShow">DirectShow</a> or <a href="https://github.com/vidvox/hap-qt-codec/" title="HAP codec for QuickTime">QuickTime</a> for movie playback or encoding it is relatively easy to add native support for the HAP video codecs to your own applications. Additional information can be found in the sections below.</p>
+
+    <h3>Examples</h3>
+    <p>The free ISF Editor tool is itself an open source application and can serve as a good example for running ISF on desktop platforms. It comes it two varieties…</p>
+    <ul>
+        <li><a href="https://github.com/mrRay/vvopensource" title="" target="_blank"><img src="" alt=" logo" /> Cocoa / Objective-C Editor</a></li>
+        <li><a href="https://github.com/mrRay/vvisf-gl" title="" target="_blank"><img src="" alt=" logo" /> C++ / qt Editor</a></li>
+    </ul>
+
+    <p>A demonstration of using an ISF shader with Canvas in javascript can be found in this example <a href="https://glitch.com/~isf-example" target="_blank">on Glitch here</a>.</p>
+
+    <h3>Creative Coding</h3>
+    <p>The following addons enable ISF support in popular creative coding environments…</p>
+    <ul>
+        <li><a href="https://github.com/zealtv/TouchDesigner-ISF-parser" title="" target="_blank"><img src="" alt=" logo" /> Touch Designer*</a></li>
+        <li><a href="https://github.com/satoruhiga/ofxISF" title="" target="_blank"><img src="" alt=" logo" /> ofxisf*</a></li>
+    </ul>
+    <p>* These add ons have only partial support for the ISF specification. Check their documentation for specific notes.</p>
 </div>
-
-<section class="big-labels grey" id="playing-back">
-    <div>
-        <h2>Playing HAP media files</h2>
-        <img src="./images/developers/playing-back.svg" alt="">
-        <p><strong>The route you choose to achieve playback will depend on the platforms you target, and your existing codebase:</strong></p>
-        <ul>
-            <li>Use any general purpose demuxer and perform the decoding yourself — Using a demuxer such as libavformat from FFmpeg, acquire encoded frames from their container, then use the <a href="https://github.com/vidvox/hap">HAP reference decoder</a> to decode frames to their compressed texture formats.</li>
-            <li>Use the HapInAVFoundation framework on macOS — <a href="https://github.com/Vidvox/hap-in-avfoundation" title="GitHub repository for the VIDVOX AVFoundation framework">HapInAVFoundation</a> supports demuxing and decoding of HAP on macOS. For legacy 32-bit applications there is sample code and a <a href="https://github.com/vidvox/hap-qt-codec/" title="HAP codec for QuickTime">codec installer</a> for working with HAP through QuickTime.</li>
-            <li>Use the DirectShow codec on Windows — Although it does not support HAP Q Alpha, the <a href="http://renderheads.com/product/hap-for-directshow/">HAP DirectShow codec</a> can decode to compressed texture formats when they are requested.</li>
-        </ul>
-    </div>
-</section>
-
-<div id="using-hap-instructions">
-    <section>
-        <h4>HAP Q and HAP Q Alpha use a <abbr title="Luma, Chrominance orange, Chrominance green">YCoCg</abbr> colorspace and require a shader to perform colorspace conversion when drawn.</h4>
-        <div class="instructions-wrapper">
-          <div class="instructions">
-              <p>The following fragment shader performs YCoCg conversion and can be used for drawing HAP Q frames:</p>
-              <script src="https://gist.github.com/dlublin/90f879cfe027ebf5792bdadf2c911bb5.js"></script>
-          </div>
-
-          <div class="instructions">
-              <p>The following fragment shader performs YCoCg conversion and combines the colour and alpha planes for HAP Q Alpha frames:</p>
-              <script src="https://gist.github.com/dlublin/01de478a2b282715e978a3587a13814d.js"></script>
-          </div>
-        </section>
-    </section>
-</div>
-
-<section class="big-labels">
-    <div>
-        <h2>Encoding HAP video within your application</h2>
-        <p>For many applications, enabling playback is sufficient, and users can be directed to one of the available <a href="./using-hap.html">HAP codecs</a> to encode their media.</p>
-        <p>If you want to perform encoding within your application, you must first of all encode your RGB(A) frames to the appropriate compressed texture format, and then encode that data to HAP frames.</p>
-        <p>A number of libraries are available to perform texture compression.</p>
-        <p>The following resources may help:</p>
-        <ul>
-            <li>The <a href="https://github.com/vidvox/hap">HAP reference encoder</a> encodes compressed texture data to HAP frames.</li>
-            <li>On macOS <a href="https://github.com/Vidvox/hap-in-avfoundation">HapInAVFoundation</a> supports the full encoding process and includes a CLI for transcoding media files.</li>
-            <li>The source for the <a href="https://github.com/Vidvox/hap-qt-codec">HAP QuickTime Codec</a>.</li>
-            <li>FFmpeg can be used to encode media to HAP from the command line. Additional information can be found on the <a href="./using-hap.html">Using HAP</a> page of this website.</li>
-        </ul>
-        <h2>Further Information</h2>
-        <p>If you have questions or problems, visit the <a href="https://github.com/vidvox/hap/issues">GitHub issues page</a>. The <a href="https://groups.google.com/forum/#!forum/hap-codec-list">HAP codecs email list</a> is used to make occasional announcements.</p>
-    </div>
-</section>
-
 
 <%- include('partials/footer'); %>
 <%- include('partials/doc_bottom'); %>
