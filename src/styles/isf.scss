@@ -149,6 +149,13 @@ section {
 html.noscroll,
 html.noscroll body {height: 100%; overflow: hidden}
 
+@media (min-width: 900px) {
+    #logo {
+        position: absolute;
+        top: 42px;
+    }
+}
+
 #nav {
     position: relative;
     // background-color: #33272C;
@@ -160,17 +167,21 @@ html.noscroll body {height: 100%; overflow: hidden}
         ul {
             list-style: none;
             padding: 0;
-        }
-        a {
-            color: #FFF;
-            font-size: 16px;
-            font-weight: 500;
-            padding: 10px;
-            &.active {
-                text-decoration: underline;
+            a {
+                color: #FFF;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 10px;
+                &.active,
+                &:hover {
+                    color: $link-color;
+                }
             }
-            &:hover {
-                color: $link-color;
+            &.secondary {
+                text-transform: uppercase;
+                a {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -188,6 +199,7 @@ html.noscroll body {height: 100%; overflow: hidden}
             right: 112px;
             top: 66px;
             padding-left: calc(128px + 10.5263157895%;);
+            text-align: right;
             ul {
                 li {
                     display: inline-block;
@@ -207,20 +219,25 @@ html.noscroll body {height: 100%; overflow: hidden}
             // text-align: center;
             position: fixed;
             z-index: 1;
-            top: 50px;
+            top: 55px;
             left: 0;
             right: 0;
+            padding-top: 32px;
             background: $dark-grey;
             ul {
-                padding-top: 24px;
-            }
-            a {
-                font-size: 22px;
-                line-height: 2;
-                display: block;
-                width: 200px;
-                margin: 0 0 0 5.263157895%;
-                white-space: nowrap;
+                margin: 12px 0;
+                a {
+                    font-size: 22px;
+                    display: block;
+                    width: 200px;
+                    margin: 0 0 0 5.263157895%;
+                    white-space: nowrap;
+                }
+                &.secondary {
+                    a {
+                        padding: 4px 10px;
+                    }
+                }
             }
             &.open {
                 height: calc(100vh - 20px);
