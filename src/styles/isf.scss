@@ -1,5 +1,5 @@
 $link-color: #02ff3f;
-$accent: #a846a0;
+$accent: #000;
 $dark-grey: #333;
 $darker-grey: #222;
 
@@ -69,6 +69,19 @@ body {
     color: #b9b9b9;
     box-shadow: 0 0 20px #222;
     background: #333;
+}
+
+body::before {
+    content: '';
+    background: #02ff3f;
+    opacity: 0.03;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -452,7 +465,7 @@ footer {
     clear: both;
     padding: 70px 10.5263157895%;
     border-top: 1px solid $darker-grey;
-    color: #9394A1;
+    color: #b9b9b9;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -471,8 +484,8 @@ footer {
     }
     a {
         display: inline-block;
-        color: #000;
-        opacity: 0.783;
+        // color: #000;
+        // opacity: 0.783;
     }
     ul {
       display: flex;
