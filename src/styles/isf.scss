@@ -491,7 +491,7 @@ footer {
       display: flex;
       padding: 12px 0;
     }
-    .social-links {
+    .s0cial-links { /* so the links don't get hidden by aggressive adblocking */
         margin-left: 36px;
         a {
             margin: 0 6px;
@@ -511,7 +511,7 @@ footer {
         ul {
           justify-content: center;
         }
-        .social-links {
+        .s0cial-links { /* so the links don't get hidden by aggressive adblocking */
             margin-left: 0;
         }
     }
