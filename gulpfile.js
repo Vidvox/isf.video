@@ -1,9 +1,14 @@
+// https://www.npmjs.com/package/gulp-connect
+// https://www.npmjs.com/package/gulp-move-to-directory-indexes
+// https://www.npmjs.com/package/gulp-imagemin
+// https://www.npmjs.com/package/gulp-sqippy
+
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     ejs = require('gulp-ejs')
 
 gulp.task('sass', function () {
-  return gulp.src('src/styles/**/*.scss')
+  return gulp.src('src/styles/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('docs/styles'))
 })

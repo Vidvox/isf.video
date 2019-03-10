@@ -1,0 +1,34 @@
+section.integrations {
+    margin: 94px 0 120px;
+    overflow: hidden;
+    .glyph {
+        display: block;
+        margin: 0 auto -35px;
+        max-width: 275px;
+    }
+    header {
+        position: relative;
+        margin-bottom: 47px;
+        background: $accent;
+        width: 50%;
+        padding: 24px 2.653508772% 33px 10.614035088%;
+        line-height: 1;
+        color: white;
+        a {
+			color: inherit;
+			font-size: inherit;
+		}
+    }
+    ul {
+        @include grid-list(0, 10.5263157895%);
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 0;
+        header {
+            width: auto;
+            // !important needed to override the higher selector specificity of the :nth-child() selector used above
+            float: none !important;
+        }
+    }
+}

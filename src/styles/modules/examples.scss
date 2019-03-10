@@ -1,0 +1,27 @@
+#examples {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 60px;
+    padding: 112px;
+    .example {
+        .example-main-link {
+            display: block;
+            overflow: hidden;
+            height: 280px;
+            span {
+                display: inline-block;
+                background: black;
+                position: relative;
+                padding: 20px;
+                color: #FFF;
+            }
+            img {
+                margin-top: -1em;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -39,6 +39,11 @@ $darker-grey: #222;
     }
 }
 
+@import 'modules/nav.scss';
+@import 'modules/integrations.scss';
+@import 'modules/examples.scss';
+@import 'modules/using-isf.scss';
+
 * {
     margin:             0;
     padding:            0;
@@ -169,137 +174,7 @@ html.noscroll body {height: 100%; overflow: hidden}
     }
 }
 
-#nav {
-    position: relative;
-    // background-color: #33272C;
-    transition: all 400ms ease;
-    #logo img {
-        transition: all 400ms ease;
-    }
-    nav {
-        ul {
-            list-style: none;
-            padding: 0;
-            a {
-                color: #FFF;
-                font-size: 16px;
-                font-weight: 500;
-                padding: 10px;
-                &.active,
-                &:hover {
-                    color: $link-color;
-                }
-            }
-            &.secondary {
-                text-transform: uppercase;
-                a {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-    @media (min-width: 900px) {
-        height: 110px;
-        padding: 24px 112px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        .hamburger {
-            display: none;
-        }
-        nav {
-            position: absolute;
-            right: 112px;
-            top: 56px;
-            padding-left: calc(128px + 10.5263157895%;);
-            text-align: right;
-            ul {
-                li {
-                    display: inline-block;
-                }
-            }
-        }
-    }
-    @media (max-width: 899px) {
-        #logo img {
-            width: 68px;
-        }
-        padding: 8px 5.263157895%;
-        nav {
-            transition: height 200ms ease-in;
-            height: 0;
-            overflow: hidden;
-            // text-align: center;
-            position: fixed;
-            z-index: 1;
-            top: 55px;
-            left: 0;
-            right: 0;
-            padding-top: 32px;
-            background: $dark-grey;
-            ul {
-                margin: 12px 0;
-                a {
-                    font-size: 22px;
-                    display: block;
-                    width: 200px;
-                    margin: 0 0 0 5.263157895%;
-                    white-space: nowrap;
-                }
-                &.secondary {
-                    a {
-                        padding: 4px 10px;
-                    }
-                }
-            }
-            &.open {
-                height: calc(100vh - 20px);
-            }
-        }
-        .hamburger {
-            display: block;
-            cursor: pointer;
-            position: absolute;
-            top: 2px;
-            right: 5.263157895%;
-            width: 48px;
-            height: 48px;
-            transition: all 0.25s;
-        }
-        .hamburger__top-bun,
-        .hamburger__bottom-bun {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 15px;
-            width: 18px;
-            height: 2px;
-            background: #FFF;
-            transform: rotate(0);
-            transition: all 0.25s;
-        }
-        .hamburger:hover [class*="-bun"] {
-            background: #AAA;
-        }
-        .hamburger__top-bun {
-            top: 23px;
-            transform: translateY(-3px);
-        }
-        .hamburger__bottom-bun {
-            bottom: 23px;
-            transform: translateY(3px);
-        }
-        .hamburger.open {
-            transform: rotate(90deg);
-        }
-        .hamburger.open .hamburger__top-bun {
-            transform: rotate(45deg) translateY(0px);
-        }
-        .hamburger.open .hamburger__bottom-bun {
-            transform: rotate(-45deg) translateY(0px);
-        }
-    }
-}
+
 
 .homepage-showcase {
     display: grid;
@@ -390,10 +265,11 @@ html.noscroll body {height: 100%; overflow: hidden}
 }
 
 .info-blocks {
+    @media (min-width: 768px) {
+        display: flex;
+    }
     div {
-        float: left;
-        width: 50%;
-        padding: 56px 9.824561404%;
+        padding: 56px;
         background-color: #DDDDDD;
     }
     div:nth-child(1) { background-color: #252525; }
@@ -402,11 +278,9 @@ html.noscroll body {height: 100%; overflow: hidden}
     div:nth-child(4) { background-color: #1A1A1A; }
     div:nth-child(5) { background-color: #141414; }
     div:nth-child(6) { background-color: #2E2E2E; }
-}
-@media (max-width: 768px) {
-  .info-blocks div {
-    width: auto;
-  }
+    h2 {
+        color: $link-color;
+    }
 }
 
 section.image {
@@ -517,41 +391,6 @@ footer {
     }
 }
 
-// Integations page
-section.integrations {
-    margin: 94px 0 120px;
-    overflow: hidden;
-    .glyph {
-        display: block;
-        margin: 0 auto -35px;
-        max-width: 275px;
-    }
-    header {
-        position: relative;
-        margin-bottom: 47px;
-        background: $accent;
-        width: 50%;
-        padding: 24px 2.653508772% 33px 10.614035088%;
-        line-height: 1;
-        color: white;
-        a {
-			color: inherit;
-			font-size: inherit;
-		}
-    }
-    ul {
-        @include grid-list(0, 10.5263157895%);
-    }
-
-    @media (max-width: 768px) {
-        margin-top: 0;
-        header {
-            width: auto;
-            // !important needed to override the higher selector specificity of the :nth-child() selector used above
-            float: none !important;
-        }
-    }
-}
 
 
 
@@ -566,102 +405,6 @@ section.integrations {
     }
 }
 
-#articles {
-    section {
-        padding: 80px 0 18px;
-        &:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        img {
-            float: left;
-            width: 58.7719%;
-            margin-left: 10.5263%;
-        }
-        .description {
-            float: right;
-            margin-top: 42px;
-            margin-right: 4.0351%;
-            width: 21.7544%;
-        }
-        header {
-            clear: both;
-            float: left;
-            position: relative;
-            top: -60px;
-            padding-top: 12px;
-            padding-right: 12px;
-            padding-bottom: 24px;
-            padding-left: 38px;
-            width: 50%;
-            color: white;
-            background-color: $accent;
-            h2{
-                padding: 0;
-            }
-			a {
-				color: inherit;
-				font-size: inherit;
-			}
-        }
-    }
-    section:nth-child(even) {
-        background-color: $darker-grey;
-        img {
-            float: right;
-            margin-left: 0;
-            margin-right: 10.5263%;
-        }
-        .description {
-            float: left;
-            margin-right: 0;
-            margin-left: 4.0351%;
-        }
-        header {
-            float: right;
-        }
-    }
-    @media (max-width: 768px) {
-        section,
-        section:nth-child(even) {
-            position: relative;
-            padding-top: 9em;
-            padding-bottom: 4em;
-            img,
-            .description {
-                display: block;
-                float: none;
-                margin-left: auto;
-                margin-right: auto;
-                width: 83.157894737%;
-            }
-            header{
-                position: absolute;
-                top: 0;
-                float: none;
-                width: 100%;
-                padding: 12px 8.4210526316%;
-                h2 {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-}
-
-#using-hap-intro {
-    padding: 60px 10.5263157895%;
-    .hap-flavors {
-        @include grid-list($v_padding: 20px, $gutter_size: 24px, $max_cell_size: 260px, $cell_padding: 48px 48px 42px, $text_align: left);
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        @media (max-width: 1024px) {
-            grid-template-columns: 1fr;
-        }
-    }
-}
-
-
 .instructions {
     float: left;
     margin-right: 4.0351%;
@@ -670,93 +413,6 @@ section.integrations {
     overflow: hidden;
     @media (max-width: 768px) {
         width: auto;
-    }
-}
-
-#using-hap-instructions {
-    section {
-        padding: 80px 10.5263157895% 60px;
-        background-color: $darker-grey;
-        &:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        img, video, .under-media {
-            float: right;
-            clear: right;
-            width: 50%;
-            @media (max-width: 768px) {
-                float: none;
-                width: 100%;
-            }
-        }
-
-        pre {
-            white-space: pre-wrap;
-        }
-    }
-    section:nth-child(odd) {
-        .instructions {
-            margin-left: 0;
-        }
-    }
-    section:nth-child(even) {
-        background-color: transparent;
-        img, video, .under-media {
-            float: left;
-            clear: left;
-        }
-        .instructions {
-            float: right;
-            margin-right: 0;
-        }
-    }
-
-    .video-section {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-
-      .media {
-        flex: 0 0 55%;
-
-        iframe {
-          width: 100%;
-        }
-      }
-
-      .instructions {
-        flex: 0 0 35%;
-      }
-
-      @media (max-width: 768px) {
-        flex-wrap: wrap;
-        .media,
-        .instructions {
-          flex-basis: 100%;
-        }
-      }
-    }
-    .instructions-wrapper {
-      display: flex;
-
-      .instructions {
-        flex: 0 0 50%;
-      }
-
-      @media (max-width: 768px) {
-        flex-wrap: wrap;
-
-        .instructions {
-          flex-basis: 100%;
-          width: 100%;
-
-          .gist {
-            width: 100%;
-          }
-        }
-      }
     }
 }
 
