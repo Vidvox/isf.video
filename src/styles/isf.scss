@@ -40,6 +40,7 @@ $darker-grey: #222;
 }
 
 @import 'modules/nav.scss';
+@import 'modules/footer.scss';
 @import 'modules/integrations.scss';
 @import 'modules/examples.scss';
 @import 'modules/using-isf.scss';
@@ -174,64 +175,6 @@ html.noscroll body {height: 100%; overflow: hidden}
     }
 }
 
-
-
-.homepage-showcase {
-    display: grid;
-    grid-template-columns: 41.6666666667% 16.6666666667% 41.6666666667%;
-    grid-template-rows: auto;
-    div {
-        padding: 72px 8.4210526316%;
-        background-size: cover;
-        background-position: 50% 50%;
-    }
-    h2 {
-        padding-right: 52px;
-    }
-    .subheading {
-        padding-right: 52px;
-    }
-    .image,
-    .wide {
-        padding-left: 17.4436090226%;
-        padding-right: 17.4436090226%;
-    }
-    .image {
-        color: #FFF;
-    }
-    .wide {
-        grid-column-end: span 2;
-    }
-    .tall {
-        grid-row-end: span 2;
-    }
-    .blue {
-        background-color: $accent;
-        color: #FFF;
-    }
-    .white {
-        background-color: #FFF;
-    }
-    a {
-        font-weight: 500;
-        display: inline-block;
-    }
-    a.white,
-    a.blue {
-        padding: 18px;
-    }
-}
-@media (max-width: 768px) {
-    .homepage-showcase {
-        display: block;
-        .image,
-        .wide {
-            padding-left: 8.721804511%;
-            padding-right: 8.721804511%;
-        }
-    }
-}
-
 .two-column {
     padding: 95px 112px 85px;
     display: grid;
@@ -335,65 +278,6 @@ section.image {
     }
 }
 
-footer {
-    clear: both;
-    padding: 70px 10.5263157895%;
-    border-top: 1px solid $darker-grey;
-    color: #b9b9b9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #dark-grey;
-    font-size: 16px;
-    font-weight: 500;
-
-    small {
-        span {
-            display: block;
-        }
-    }
-
-    li {
-        display: inline;
-    }
-    a {
-        display: inline-block;
-        // color: #000;
-        // opacity: 0.783;
-    }
-    ul {
-      display: flex;
-      padding: 12px 0;
-    }
-    .s0cial-links { /* so the links don't get hidden by aggressive adblocking */
-        margin-left: 36px;
-        a {
-            margin: 0 6px;
-            width: 32px;
-            height: 32px;
-        }
-    }
-}
-@media (max-width: 768px) {
-    footer {
-        display: block;
-        text-align: center;
-        small {
-            display: block;
-            margin: 16px 10%;
-        }
-        ul {
-          justify-content: center;
-        }
-        .s0cial-links { /* so the links don't get hidden by aggressive adblocking */
-            margin-left: 0;
-        }
-    }
-}
-
-
-
-
 .cool-header {
     text-align: center;
     padding: 90px 32px 70px;
@@ -423,26 +307,6 @@ footer {
     }
 }
 
-#playing-back {
-    position: relative;
-    padding-bottom: 0;
-    h2, p {
-        margin-bottom: 0.5em;
-    }
-    img {
-        position: absolute;
-        left: 17%;
-        width: 20%;
-        top: 32%;
-        display: block;
-    }
-
-    @media (max-width: 768px) {
-        img {
-            display: none;
-        }
-    }
-}
 
 .centered-block {
     padding: 60px 10.5263158% * 2;
@@ -451,45 +315,6 @@ footer {
         padding-right: 8.4210526316%;
     }
 
-}
-
-#codec-info {
-    ul {
-        padding: 0;
-        list-style: none;
-        font-size: 0;
-        display: flex;
-        justify-content: space-between;
-        li {
-            width: 30%;
-            font-size: 13px;
-            line-height: 20px;
-
-            strong {
-              display: block;
-            }
-
-            .benchmark-logo {
-                margin-top: 12px;
-                margin-bottom: 44px;
-            }
-
-            p {
-              margin-top: 0;
-            }
-        }
-    }
-    @media (max-width: 768px) {
-        ul {
-            display: block;
-            li {
-                width: auto;
-                margin: 0;
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-    }
 }
 
 .cta-bar {
