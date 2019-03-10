@@ -3,42 +3,7 @@ $accent: #000;
 $dark-grey: #333;
 $darker-grey: #222;
 
-@mixin grid-list($v_padding: 0, $h_padding: 0px, $gutter_size: 12px, $max_cell_size: 200px, $cell_padding: 30px 30px 12px, $text-align: center) {
-    clear: both;
-    margin-left: $gutter_size / -2;
-    margin-right: $gutter_size / -2;
-    // calc stuff is to compensate for the 10px borders on the li's below
-    padding: $v_padding $h_padding;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax($max_cell_size, auto));
-    li {
-        background-color: $darker-grey;
-        border: $gutter_size / 2 solid #FFF;
-        padding: $cell_padding;
-        transition: background 150ms ease-out;
-        text-align: $text-align;
-        line-height: 1.333333333;
-        font-size: 12px;
-        a {
-            font-size: 12px;
-            color: $dark-grey;
-            img {
-                margin-bottom: 16px;
-                width: 100%;
-                transform: scale(1.0);
-                transition: transform 150ms ease-out;
-            }
-        }
-        &:hover{
-            background: darken($darker-grey, 8%);
-            img {
-                transform: scale(1.1);
-            }
-        }
-    }
-}
-
+@import 'modules/grid-list.scss';
 @import 'modules/nav.scss';
 @import 'modules/footer.scss';
 @import 'modules/integrations.scss';
@@ -289,24 +254,11 @@ section.image {
     }
 }
 
-.instructions {
-    float: left;
-    margin-right: 4.0351%;
-    margin-left: 4.0351%;
-    width: 40%;
-    overflow: hidden;
-    @media (max-width: 768px) {
-        width: auto;
-    }
-}
-
 #creative-coding {
-    // padding: 60px 13.8596491228%;
     ul {
         @include grid-list($v_padding: 20px, $max_cell_size: 210px);
     }
 }
-
 
 .centered-block {
     padding: 60px 10.5263158% * 2;
