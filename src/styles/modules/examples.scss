@@ -1,3 +1,5 @@
+$transition-duration: 200ms;
+
 #examples {
     display: grid;
     grid-template-columns: auto auto;
@@ -6,22 +8,44 @@
     .example {
         .example-main-link {
             display: block;
+            position: relative;
             overflow: hidden;
             height: 280px;
             span {
+                position: absolute;
+                z-index: 1;
                 display: inline-block;
                 background: black;
-                position: relative;
                 padding: 20px;
                 color: #FFF;
+                transition: color $transition-duration ease;
             }
             img {
-                margin-top: -1em;
+                margin-top: 2em;
+                position: relative;
                 display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                filter: none;
+                transition: filter $transition-duration ease;
+            }
+            &:hover {
+                span {
+                    color: $link-color;
+                }
+                img {
+                    filter: sepia(100%) saturate(300%) brightness(100%) hue-rotate(60deg);
+                }
             }
         }
+        &:nth-child(even) {
+            .example-main-link {
+                span {
+                    right: 0;
+                }
+            }
+        }
+
     }
 }
