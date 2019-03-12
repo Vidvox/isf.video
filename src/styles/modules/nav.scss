@@ -61,7 +61,7 @@
             // text-align: center;
             position: fixed;
             z-index: 1;
-            top: 55px;
+            top: -32px;
             left: 0;
             right: 0;
             padding-top: 32px;
@@ -83,6 +83,7 @@
             }
             &.open {
                 height: calc(100vh - 20px);
+                top: 55px;
             }
         }
         .hamburger {

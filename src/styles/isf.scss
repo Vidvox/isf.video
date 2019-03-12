@@ -50,7 +50,7 @@ body::before {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
 }
 
@@ -187,11 +187,12 @@ html.noscroll body {height: 100%; overflow: hidden}
     div:nth-child(6) { background-color: #2E2E2E; }
 }
 
-section.image {
-    margin-top: -60px;
-    background-size: cover;
-    background-position: 50% 50%;
-    color: #FFF;
+.parallax-container {
+    max-height: 620px;
+    overflow: hidden;
+    img {
+        // will-change: transform;
+    }
 }
 
 .slogan {
