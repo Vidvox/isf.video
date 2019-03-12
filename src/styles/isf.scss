@@ -143,9 +143,9 @@ html.noscroll body {height: 100%; overflow: hidden}
 .two-column {
     padding: 95px 112px 85px;
     display: grid;
-    grid-template-columns: 29% 73%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: auto;
-    align-items: center;
+    align-items: top;
     h2 {
         padding-right: 0;
     }
@@ -186,9 +186,6 @@ html.noscroll body {height: 100%; overflow: hidden}
     div:nth-child(4) { background-color: #1A1A1A; }
     div:nth-child(5) { background-color: #141414; }
     div:nth-child(6) { background-color: #2E2E2E; }
-    h2 {
-        color: $link-color;
-    }
 }
 
 section.image {
