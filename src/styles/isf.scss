@@ -2,6 +2,7 @@ $link-color: #02ff3f;
 $accent: #000;
 $dark-grey: #333;
 $darker-grey: #222;
+$text-color: #b9b9b9;
 
 @import 'modules/grid-list.scss';
 @import 'modules/nav.scss';
@@ -37,7 +38,7 @@ body {
     max-width: 1400px;
     margin: auto;
     -webkit-font-smoothing: antialiased;
-    color: #b9b9b9;
+    color: $text-color;
     background: #333;
 }
 
