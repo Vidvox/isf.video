@@ -17,7 +17,7 @@ $transition-duration: 200ms;
                 display: inline-block;
                 background: black;
                 padding: 20px;
-                color: #FFF;
+                color: $white;
                 transition: color $transition-duration ease;
             }
             img {

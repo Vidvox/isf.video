@@ -1,8 +1,10 @@
+$white: #E5ECE6;
+$black: #000702;
+$dark-grey: #323933;
+$darker-grey: #212823;
 $link-color: #02ff3f;
-$accent: #000;
-$dark-grey: #333;
-$darker-grey: #222;
-$text-color: #b9b9b9;
+$text-color: #b4bbb6;
+$accent: $black;
 
 @import 'modules/grid-list.scss';
 @import 'modules/nav.scss';
@@ -39,21 +41,21 @@ body {
     margin: auto;
     -webkit-font-smoothing: antialiased;
     color: $text-color;
-    background: #333;
+    background: $dark-grey;
 }
 
-body::before {
-    content: '';
-    background: #02ff3f;
-    opacity: 0.03;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    pointer-events: none;
-}
+// body::before {
+//     content: '';
+//     background: #02ff3f;
+//     opacity: 0.03;
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     z-index: 2;
+//     pointer-events: none;
+// }
 
 h1,h2,h3,h4,h5,h6 {
     color: rgba(255,255,255,0.9);
@@ -183,9 +185,9 @@ section.text {
     div {
         padding: 56px;
     }
-    div:nth-child(1) { background-color: #252525; }
-    div:nth-child(2) { background-color: #1A1A1A; }
-    div:nth-child(3) { background-color: #222222; }
+    div:nth-child(1) { background-color: #242B26; }
+    div:nth-child(2) { background-color: #19201B; }
+    div:nth-child(3) { background-color: #212823; }
 }
 
 .parallax-container {
@@ -202,7 +204,7 @@ section.text {
         right: 1em;
         bottom: 0.6em;
         text-align: right;
-        color: #FFF;
+        color: $white;
         font-size: 12px;
         text-shadow: #000 0px 1px 1px;
         line-height: 1.4;
@@ -265,7 +267,7 @@ section.text {
 .cool-header {
     text-align: center;
     padding: 90px 32px 70px;
-    color: white;
+    color: $white;
     background: $dark-grey;
     .subheading {
         display: block;
@@ -291,7 +293,7 @@ section.text {
 .cta-bar {
     padding: 32px;
     background: $accent;
-    color: #FFF;
+    color: $white;
     text-align: center;
     font-weight: bold;
     .subheading {
@@ -305,6 +307,6 @@ section.text {
         }
     }
     @media (max-width: 768px) {
-        border-bottom: 2px solid #FFF;
+        border-bottom: 2px solid $white;
     }
 }
