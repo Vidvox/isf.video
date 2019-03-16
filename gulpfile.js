@@ -1,12 +1,8 @@
-// https://www.npmjs.com/package/gulp-connect
-// https://www.npmjs.com/package/gulp-move-to-directory-indexes
-// https://www.npmjs.com/package/gulp-imagemin
-// https://www.npmjs.com/package/gulp-sqippy
-
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    ejs = require('gulp-ejs'),
-    moveToDirectoryIndex = require('gulp-move-to-directory-indexes')
+const gulp = require('gulp'),
+      sass = require('gulp-sass'),
+      ejs = require('gulp-ejs'),
+      moveToDirectoryIndex = require('gulp-move-to-directory-indexes'),
+      imagemin = require('gulp-imagemin')
 
 gulp.task('sass', function () {
   return gulp.src('src/styles/*.scss')
@@ -31,6 +27,12 @@ gulp.task('images',function(){
     .pipe(gulp.dest('docs/images/'))
 })
 
+gulp.task('images-minified',function(){  
+  return gulp.src('src/images/**/*.*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('docs/images/'))
+})
+
 gulp.task('videos',function(){  
   return gulp.src('src/videos/**/*.*')
     .pipe(gulp.dest('docs/videos/'))
@@ -45,5 +47,7 @@ gulp.task('watch', function() {
 })
 
 gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos'])
+
+gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos'])
 
 gulp.task('default', ['build', 'watch'])
