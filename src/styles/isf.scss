@@ -44,19 +44,6 @@ body {
     background: $dark-grey;
 }
 
-// body::before {
-//     content: '';
-//     background: #02ff3f;
-//     opacity: 0.03;
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     z-index: 2;
-//     pointer-events: none;
-// }
-
 h1,h2,h3,h4,h5,h6 {
     color: rgba(255,255,255,0.9);
     font-weight: 500;
@@ -194,8 +181,18 @@ section.text {
     position: relative;
     max-height: 620px;
     overflow: hidden;
-    img {
-        // will-change: transform;
+    &::before {
+        content: '';
+        display: block;
+        background: #02ff3f;
+        opacity: 0.03;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        pointer-events: none;
     }
     .caption {
         opacity: 0.7;
