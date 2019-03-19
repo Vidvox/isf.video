@@ -1,31 +1,37 @@
 $transition-duration: 200ms;
 
 #examples {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 60px;
-    padding: 112px;
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px 60px;
+        padding: 96px 112px;
+    }
+    padding: 10%;
     .example {
         .example-main-link {
             display: block;
             position: relative;
-            overflow: hidden;
-            height: 280px;
             span {
                 position: absolute;
                 z-index: 1;
+                padding: 20px;
+                @media (min-width: 768px) {
+                    left: -112px;
+                    padding: 20px 20px 20px 132px;
+                }
                 display: inline-block;
                 background: black;
-                padding: 20px;
                 color: $white;
                 transition: color $transition-duration ease;
             }
             img {
-                margin-top: 2em;
+                top: 2em;
+                margin-bottom: 2em;
                 position: relative;
                 display: block;
                 width: 100%;
-                height: 100%;
+                height: 280px;
                 object-fit: cover;
                 filter: none;
                 transition: filter $transition-duration ease;
@@ -39,13 +45,24 @@ $transition-duration: 200ms;
                 }
             }
         }
-        &:nth-child(even) {
-            .example-main-link {
-                span {
-                    right: 0;
+
+        @media (min-width: 768px) {
+            &:nth-child(even) {
+                .example-main-link {
+                    span {
+                        left: auto;
+                        right: -112px;
+                        padding: 20px 132px 20px 20px ;
+                    }
                 }
             }
         }
-
+        p {
+            padding-top: 1em;
+            margin-bottom: 3em;
+            color: $white;
+            font-size: 14px;
+        }
     }
 }
+
