@@ -3,11 +3,11 @@ $('.hamburger').click(function(){
   $('html').toggleClass('noscroll')
 });
 
-// const title = document.querySelector('.parallax-container img');
-// const speed = 0.2;
+const title = document.querySelector('.parallax-container img');
+const speed = 0.2;
 
-// title.style.transform = 'translateY( calc( var(--scrollparallax) * -1px ) )';
+title.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
 
-// window.addEventListener('scroll', function() {
-//   title.style.setProperty('--scrollparallax', (document.body.scrollTop || document.documentElement.scrollTop) * speed);
-// });
+window.addEventListener('scroll', function() {
+  title.style.setProperty('--scrollparallax', (document.body.scrollTop || document.documentElement.scrollTop) * speed);
+});

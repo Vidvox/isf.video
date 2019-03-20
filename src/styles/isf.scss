@@ -184,19 +184,8 @@ section.text {
     position: relative;
     max-height: 620px;
     overflow: hidden;
-    &::before {
-        content: '';
-        display: block;
-        background: #02ff3f;
-        opacity: 0.03;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-        pointer-events: none;
-    }
+    display: flex;
+    flex-direction: column-reverse;
     .caption {
         opacity: 0.7;
         transition: opacity 150ms ease;
