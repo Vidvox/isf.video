@@ -6,6 +6,9 @@ $link-color: #02ff3f;
 $text-color: #b4bbb6;
 $accent: $black;
 
+$transition-duration: 250ms;
+
+
 @import 'modules/grid-list.scss';
 @import 'modules/nav.scss';
 @import 'modules/footer.scss';
@@ -299,7 +302,11 @@ section.text {
     a {
         color: inherit;
         font-size: 16px;
-        img {
+        transition: color $transition-duration ease;
+        &:hover {
+            color: $link-color;
+        }
+        img, svg {
             margin-left: 15px;
         }
     }

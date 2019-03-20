@@ -1,5 +1,3 @@
-$transition-duration: 200ms;
-
 #examples {
     @media (min-width: 768px) {
         display: grid;
@@ -12,6 +10,7 @@ $transition-duration: 200ms;
         .example-main-link {
             display: block;
             position: relative;
+            transition: color $transition-duration ease;
             span {
                 position: absolute;
                 z-index: 1;
