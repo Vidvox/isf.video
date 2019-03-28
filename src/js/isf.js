@@ -9,5 +9,5 @@ const speed = 0.2;
 title.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
 
 window.addEventListener('scroll', function() {
-  title.style.setProperty('--scrollparallax', (document.body.scrollTop || document.documentElement.scrollTop) * speed);
+  title.style.setProperty('--scrollparallax', ((document.body.scrollTop || document.documentElement.scrollTop)-$(title).offset().top+(0.5*$(title).height())) * speed);
 });
