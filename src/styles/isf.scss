@@ -289,7 +289,11 @@ section.text {
 
 #creative-coding {
     ul {
-        @include grid-list($v_padding: 20px, $max_cell_size: 210px);
+        @include grid-list($v_padding: 20px);
+        grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
 
@@ -299,7 +303,6 @@ section.text {
         padding-left: 8.4210526316%;
         padding-right: 8.4210526316%;
     }
-
 }
 
 .cta-bar {
