@@ -7,17 +7,19 @@
             display: table;
             clear: both;
         }
-        &:nth-child(odd) {
-          img {
-            margin-left: 36px;
+        @media (min-width: 768px) {
+          &:nth-child(odd) {
+            img, iframe {
+              margin-left: 36px;
+            }
+          }
+          &:nth-child(even) {
+            img, iframe {
+              margin-right: 36px;
+            }
           }
         }
-        &:nth-child(even) {
-          img {
-            margin-right: 36px;
-          }
-        }
-        img {
+        img, iframe {
             float: right;
             clear: right;
             width: 50%;
@@ -39,7 +41,7 @@
     }
     section:nth-child(even) {
         background-color: transparent;
-        img {
+        img, iframe {
             float: left;
             clear: left;
             margin-left: 0;
