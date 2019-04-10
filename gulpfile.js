@@ -2,7 +2,8 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       ejs = require('gulp-ejs'),
       moveToDirectoryIndex = require('gulp-move-to-directory-indexes'),
-      imagemin = require('gulp-imagemin')
+      imagemin = require('gulp-imagemin'),
+      injectSvg = require('gulp-inject-svg')
 
 gulp.task('sass', function () {
   return gulp.src('src/styles/*.scss')
@@ -18,6 +19,7 @@ gulp.task('scripts', function() {
 gulp.task('ejs',function(){  
   return gulp.src('src/views/*.ejs')
     .pipe(ejs({},{}, {ext:'.html'}))
+    // .pipe(injectSvg({base: '/src'}))
     .pipe(moveToDirectoryIndex())
     .pipe(gulp.dest('docs/'))
 })
@@ -31,6 +33,12 @@ gulp.task('images-minified',function(){
   return gulp.src('src/images/**/*.*')
     .pipe(imagemin())
     .pipe(gulp.dest('docs/images/'))
+})
+
+gulp.task('embed-svg',function(){  
+  return gulp.src('*.html')
+    .pipe(embedSvg())
+    .pipe(gulp.dest('docs/'));
 })
 
 gulp.task('videos',function(){  

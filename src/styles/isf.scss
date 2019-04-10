@@ -162,6 +162,10 @@ section.text {
     .two-column {
         display: block;
         padding: 10%;
+        img {
+            width: 30%;
+            margin-bottom: 12px;
+        }
         .text {
             margin: 24px 0 0;
         }
@@ -171,6 +175,9 @@ section.text {
 .info-blocks {
     @media (min-width: 768px) {
         display: flex;
+        div {
+            flex: 1;
+        }
     }
     div {
         padding: 56px;
@@ -178,6 +185,17 @@ section.text {
     div:nth-child(1) { background-color: #242B26; }
     div:nth-child(2) { background-color: #19201B; }
     div:nth-child(3) { background-color: #212823; }
+    img {
+        display: block;
+        width: 50%;
+        margin: 28px 0 54px 20%;
+    }
+    h2 {
+        font-size: 22px
+    }
+    p {
+        font-size: 15px;
+    }
 }
 
 .parallax-container {
