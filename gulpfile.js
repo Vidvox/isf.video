@@ -46,6 +46,11 @@ gulp.task('videos',function(){
     .pipe(gulp.dest('docs/videos/'))
 })
 
+gulp.task('redirects',function(){  
+  return gulp.src('_redirects')
+    .pipe(gulp.dest('docs/'))
+})
+
 gulp.task('watch', function() {  
     gulp.watch('src/styles/**/*.scss', ['sass'])
     gulp.watch('src/js/**/*.js', ['scripts'])
@@ -56,6 +61,6 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos'])
 
-gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos'])
+gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects'])
 
 gulp.task('default', ['build', 'watch'])
