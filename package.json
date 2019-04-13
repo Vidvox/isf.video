@@ -1,16 +1,16 @@
 {
-  "name": "HAPCodecsSite",
-  "description": "Website for the HAP video codecs",
+  "name": "ISF Website",
+  "description": "Website for the ISF standard",
   "license": "UNLICENSED",
-  "version": "0.0.1",
-  "homepage": "http://hap.video",
+  "version": "1",
+  "homepage": "https://isf.video",
   "author": {
     "name": "VIDVOX, LLC",
     "email": "support@vidvox.net"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dlublin/hapcodecssite"
+    "url": "git://github.com/vidvox/isf.video"
   },
   "dependencies": {
     "ejs": "^2.5.8",
