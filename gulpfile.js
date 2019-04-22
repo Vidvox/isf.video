@@ -2,7 +2,8 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       ejs = require('gulp-ejs'),
       moveToDirectoryIndex = require('gulp-move-to-directory-indexes'),
-      imagemin = require('gulp-imagemin')
+      imagemin = require('gulp-imagemin'),
+      connect = require('gulp-connect')
 
 gulp.task('sass', function () {
   return gulp.src('src/styles/*.scss')
@@ -49,16 +50,30 @@ gulp.task('redirects',function(){
     .pipe(gulp.dest('docs/'))
 })
 
+gulp.task('serve', function() {
+  connect.server({
+    root: 'docs',
+    livereload: true
+  })
+})
+
+gulp.task('livereload', function () {
+  gulp.src('docs/*.html')
+    .pipe(gulp.dest('docs/'))
+    .pipe(connect.reload());
+});
+
 gulp.task('watch', function() {  
     gulp.watch('src/styles/**/*.scss', ['sass'])
     gulp.watch('src/js/**/*.js', ['scripts'])
     gulp.watch('src/views/**/*.ejs', ['ejs'])
     gulp.watch('src/images/**/*.*', ['images'])
     gulp.watch('src/videos/**/*.*', ['videos'])
+    gulp.watch(['docs/**'], ['livereload']);
 })
 
 gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos'])
 
 gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects'])
 
-gulp.task('default', ['build', 'watch'])
+gulp.task('default', ['build', 'serve', 'watch'])
