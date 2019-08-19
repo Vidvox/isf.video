@@ -1,6 +1,6 @@
 .tutorial-video {
     margin: 0 5.263157895%;
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
         margin: 0 112px;
     }
 	padding-bottom: 62.50%; /* 1920x1080 */
@@ -15,22 +15,16 @@
 	height: 100%;
 }
 
-.tutorial-steps {
-    margin: 18px 5.263157895%;
-    @media (min-width: 768px) {
-        margin: 24px 112px;
-    }
-    font-size: 24px;
-    font-weight: 300;
-    font-style: italic;
-    .tutorial-step {
-        display: flex;
-        align-items: flex-start;
-        p {
-            margin-top: 0;
-        }
-        .tutorial-step-number {
-            padding-right: 12px;
-        }
+.timestamp {
+    display: block;
+    float: left;
+    clear: left;
+    width: 100%;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 100;
+    @media (max-width: 768px) {
+        display: inline;
+        float: none;
     }
 }
