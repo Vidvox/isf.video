@@ -1,6 +1,8 @@
 .tutorial-video {
-    // position: sticky;
-    // top: 0;
+    margin: 0 5.263157895%;
+    @media (min-width: 768px) {
+        margin: 0 112px;
+    }
 	padding-bottom: 62.50%; /* 1920x1080 */
     height: 0;
     position: relative;
