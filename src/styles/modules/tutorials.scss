@@ -1,0 +1,34 @@
+.tutorial-video {
+    // position: sticky;
+    // top: 0;
+	padding-bottom: 62.50%; /* 1920x1080 */
+    height: 0;
+    position: relative;
+}
+.tutorial-video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.tutorial-steps {
+    margin: 18px 5.263157895%;
+    @media (min-width: 768px) {
+        margin: 24px 112px;
+    }
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    .tutorial-step {
+        display: flex;
+        align-items: flex-start;
+        p {
+            margin-top: 0;
+        }
+        .tutorial-step-number {
+            padding-right: 12px;
+        }
+    }
+}
