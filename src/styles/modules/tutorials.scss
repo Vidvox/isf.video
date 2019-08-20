@@ -28,3 +28,29 @@
         float: none;
     }
 }
+
+.tutorials-nav+.big-labels {
+    padding-bottom: 0 !important;
+}
+
+.tutorials-nav {
+    margin-top: 0;
+    padding-top: 0 !important;
+    h2 {
+        color: $text-color;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline;
+            a {
+                display: inline-block;
+                padding-right: 14px;
+                &.active {
+                    display: none;
+                }
+            }
+        }
+    }
+}

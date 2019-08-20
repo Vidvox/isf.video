@@ -17,7 +17,8 @@ gulp.task('scripts', function() {
 })
 
 gulp.task('ejs',function(){  
-  return gulp.src('src/views/*.ejs')
+  return gulp.src([ 'src/views/**/*.ejs',
+                    '!src/views/partials/**/*.ejs'])
     .pipe(ejs({},{}, {ext:'.html'}))
     .pipe(moveToDirectoryIndex())
     .pipe(gulp.dest('docs/'))
