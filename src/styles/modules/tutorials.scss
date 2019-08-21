@@ -29,8 +29,8 @@
     }
 }
 
-.tutorials-nav+.big-labels {
-    padding-bottom: 0 !important;
+.tutorial-steps {
+    @extend .big-labels;
 }
 
 .tutorials-nav {
