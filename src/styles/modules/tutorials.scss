@@ -1,0 +1,57 @@
+.tutorial-video {
+    margin: 0 5.263157895%;
+    @media (min-width: 900px) {
+        margin: 0 112px;
+    }
+	padding-bottom: 62.50%; /* 1920x1080 */
+    height: 0;
+    position: relative;
+}
+.tutorial-video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.timestamp {
+    display: block;
+    float: left;
+    clear: left;
+    width: 100%;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 100;
+    @media (max-width: 768px) {
+        display: inline;
+        float: none;
+    }
+    color: $text-color;
+}
+
+.tutorial-steps {
+    @extend .big-labels;
+}
+
+.tutorials-nav {
+    margin-top: 0;
+    padding-top: 0 !important;
+    h2 {
+        color: $text-color;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline;
+            a {
+                display: inline-block;
+                padding-right: 14px;
+                &.active {
+                    display: none;
+                }
+            }
+        }
+    }
+}
