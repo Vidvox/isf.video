@@ -64,6 +64,11 @@ gulp.task('livereload', function () {
     .pipe(connect.reload());
 });
 
+gulp.task('move-google-verification', function(){  
+  return gulp.src('google8e356c7d3c1d1496.html')
+    .pipe(gulp.dest('docs/'))
+})
+
 gulp.task('watch', function() {  
     gulp.watch('src/styles/**/*.scss', ['sass'])
     gulp.watch('src/js/**/*.js', ['scripts'])
@@ -75,6 +80,6 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos'])
 
-gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects'])
+gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects', 'move-google-verification'])
 
 gulp.task('default', ['build', 'serve', 'watch'])
