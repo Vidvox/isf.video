@@ -77,7 +77,7 @@ gulp.task('build_sitemap', function () {
       .pipe(sitemap({
           siteUrl: 'https://isf.video'
       }))
-      .pipe(gulp.dest('./docs'))
+      .pipe(gulp.dest('docs/'))
 })
 
 gulp.task('watch', function() {  
