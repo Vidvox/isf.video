@@ -70,7 +70,7 @@ gulp.task('move-google-verification', function(){
     .pipe(gulp.dest('docs/'))
 })
 
-gulp.task('sitemap', function () {
+gulp.task('build_sitemap', function () {
   gulp.src('docs/**/*.html', {
           read: false
       })
@@ -89,8 +89,8 @@ gulp.task('watch', function() {
     gulp.watch(['docs/**'], ['livereload']);
 })
 
-gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos', 'sitemap'])
+gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos', 'build_sitemap'])
 
-gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects', 'move-google-verification', 'sitemap'])
+gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects', 'move-google-verification', 'build_sitemap'])
 
 gulp.task('default', ['build', 'serve', 'watch'])
