@@ -4,6 +4,7 @@ const gulp = require('gulp'),
       moveToDirectoryIndex = require('gulp-move-to-directory-indexes'),
       imagemin = require('gulp-imagemin'),
       connect = require('gulp-connect'),
+      runSequence = require('run-sequence'),
       sitemap = require('gulp-sitemap')
 
 gulp.task('sass', function () {
@@ -70,14 +71,14 @@ gulp.task('move-google-verification', function(){
     .pipe(gulp.dest('docs/'))
 })
 
-gulp.task('build_sitemap', function () {
+gulp.task('sitemap', function () {
   gulp.src('docs/**/*.html', {
           read: false
       })
       .pipe(sitemap({
           siteUrl: 'https://isf.video'
       }))
-      .pipe(gulp.dest('docs/'))
+      .pipe(gulp.dest('./docs'))
 })
 
 gulp.task('watch', function() {  
@@ -89,8 +90,10 @@ gulp.task('watch', function() {
     gulp.watch(['docs/**'], ['livereload']);
 })
 
-gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos', 'build_sitemap'])
+gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos', 'sitemap'])
 
-gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects', 'move-google-verification', 'build_sitemap'])
+gulp.task('deploy', ['ejs', 'sass', 'scripts', 'images', 'videos', 'redirects', 'move-google-verification'], function (cb) {
+  runSequence(['sitemap'], cb);
+})
 
 gulp.task('default', ['build', 'serve', 'watch'])
