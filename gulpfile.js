@@ -62,11 +62,21 @@ gulp.task('livereload', function () {
   gulp.src('docs/*.html')
     .pipe(gulp.dest('docs/'))
     .pipe(connect.reload());
-});
+})
 
 gulp.task('move-google-verification', function(){  
   return gulp.src('google8e356c7d3c1d1496.html')
     .pipe(gulp.dest('docs/'))
+})
+
+gulp.task('sitemap', function () {
+  gulp.src('build/**/*.html', {
+          read: false
+      })
+      .pipe(sitemap({
+          siteUrl: 'https://isf.video'
+      }))
+      .pipe(gulp.dest('./docs'))
 })
 
 gulp.task('watch', function() {  
@@ -80,6 +90,6 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos'])
 
-gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects', 'move-google-verification'])
+gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects', 'move-google-verification', 'sitemap'])
 
 gulp.task('default', ['build', 'serve', 'watch'])
