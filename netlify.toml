@@ -1,4 +1,2 @@
 plugins:
   - type: '@netlify/plugin-sitemap'
-    config:
-      distPath: docs
