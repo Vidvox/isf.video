@@ -70,7 +70,7 @@ gulp.task('move-google-verification', function(){
 })
 
 gulp.task('sitemap', function () {
-  gulp.src('build/**/*.html', {
+  gulp.src('docs/**/*.html', {
           read: false
       })
       .pipe(sitemap({
