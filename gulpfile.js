@@ -3,7 +3,8 @@ const gulp = require('gulp'),
       ejs = require('gulp-ejs'),
       moveToDirectoryIndex = require('gulp-move-to-directory-indexes'),
       imagemin = require('gulp-imagemin'),
-      connect = require('gulp-connect')
+      connect = require('gulp-connect'),
+      sitemap = require('gulp-sitemap')
 
 gulp.task('sass', function () {
   return gulp.src('src/styles/*.scss')
@@ -88,7 +89,7 @@ gulp.task('watch', function() {
     gulp.watch(['docs/**'], ['livereload']);
 })
 
-gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos'])
+gulp.task('build', ['sass', 'scripts', 'ejs', 'images', 'videos', 'sitemap'])
 
 gulp.task('deploy', ['sass', 'scripts', 'ejs', 'images-minified', 'videos', 'redirects', 'move-google-verification', 'sitemap'])
 
